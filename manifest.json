@@ -1,0 +1,22 @@
+{
+  "name": "SUP3RA DIGITAL",
+  "short_name": "SUP3RA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1b0c2d",
+  "theme_color": "#2a153f",
+  "orientation": "portrait",
+  "description": "Sua marca não precisa aparecer. Ela precisa ser sentida.",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
