@@ -32,38 +32,36 @@ export default function Home() {
       </Head>
 
       {/* CTA PARA AGENDAMENTO DOS SERVIÇOS */}
-      <section className="bg-[#2a153f] py-24 px-6 md:px-24 text-center">
-        <motion.h2
+      <section className="py-24 px-6 md:px-24 text-center">
+        <motion.h1
           initial="hidden"
           whileInView="visible"
           variants={fadeInUp}
           transition={{ duration: 1 }}
-          className="text-3xl md:text-4xl font-serif text-[#f3e5f5] mb-6"
+          className="text-4xl md:text-5xl font-serif mb-8"
         >
-          Escolha o ritual certo para sua marca
-        </motion.h2>
+          Vamos transformar sua marca em uma experiência simbólica
+        </motion.h1>
         <motion.p
           initial="hidden"
           whileInView="visible"
           variants={fadeInUp}
-          transition={{ duration: 1.2 }}
-          className="text-[#d1c4e9] max-w-2xl mx-auto mb-8"
+          transition={{ duration: 1, delay: 0.2 }}
+          className="max-w-2xl mx-auto mb-6 text-lg"
         >
-          Agende uma conversa simbólica ou peça diretamente o serviço que ativa sua presença.
+          Agende um atendimento ritualizado e descubra como sentir a presença da sua marca.
         </motion.p>
-        <motion.a
-          href="https://wa.me/SEUNUMERO?text=Olá,%20quero%20iniciar%20um%20ritual%20com%20a%20SUP3RA"
+        <a
+          href="https://wa.me/5588999137231"
           target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.05 }}
-          className="inline-block bg-white text-black px-6 py-3 rounded-full text-lg hover:bg-[#f3e5f5] transition shadow-lg"
+          className="inline-block bg-white text-black px-6 py-3 rounded-full hover:bg-[#f3e5f5] transition shadow"
         >
-          Iniciar Conversa via WhatsApp
-        </motion.a>
+          Agendar agora
+        </a>
       </section>
 
       {/* PÚBLICO IDEAL */}
-      <section className="bg-[#1c0f2d] py-24 px-6 md:px-24 text-center">
+      <section className="bg-[#160b24] py-24 px-6 md:px-24 text-center">
         <motion.h2
           initial="hidden"
           whileInView="visible"
@@ -71,23 +69,17 @@ export default function Home() {
           transition={{ duration: 1 }}
           className="text-3xl md:text-4xl font-serif text-[#f3e5f5] mb-8"
         >
-          Para quem é a SUP3RA
+          Para quem é a SUP3RA DIGITAL?
         </motion.h2>
-        <div className="max-w-4xl mx-auto text-[#d1c4e9] text-lg leading-relaxed space-y-6">
-          <p>
-            Para marcas que têm alma, mas não sabem como manifestá-la no digital. Que querem ser sentidas, não apenas vistas.
-          </p>
-          <p>
-            Para empreendedores criativos, terapeutas, artistas, líderes de propósito, profissionais intuitivos, negócios regenerativos e marcas que desejam comunicação simbólica, posicionamento com essência e design com presença.
-          </p>
-          <p>
-            Para quem sente que não cabe no marketing tradicional — e quer comunicar com verdade, estética e ritual.
-          </p>
+        <div className="max-w-4xl mx-auto text-[#d1bfe8] text-lg space-y-4">
+          <p>✨ Empreendedores que acreditam que marca é alma.</p>
+          <p>🌀 Negócios que valorizam autenticidade, presença e sensibilidade.</p>
+          <p>🌱 Marcas que querem ser sentidas, não apenas vistas.</p>
         </div>
       </section>
 
       {/* PROJETOS ENTREGUES */}
-      <section className="bg-[#2a153f] py-24 px-6 md:px-24 text-center">
+      <section className="py-24 px-6 md:px-24 text-center">
         <motion.h2
           initial="hidden"
           whileInView="visible"
@@ -95,78 +87,12 @@ export default function Home() {
           transition={{ duration: 1 }}
           className="text-3xl md:text-4xl font-serif text-[#f3e5f5] mb-8"
         >
-          Projetos Entregues
+          Marcas que já foram ritualizadas
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-          {[{
-            title: 'Lunária – Ritual de Posicionamento',
-            desc: 'Diagnóstico arquetípico completo + manifesto sensorial + copy para lançamento da marca.'
-          }, {
-            title: 'Áurea Floral – Script Sensorial',
-            desc: 'Narrativa poética e mística para vídeo institucional de marca de cosméticos naturais.'
-          }, {
-            title: 'Vivaz Alma – Rebranding com Presença',
-            desc: 'Transformação simbólica da identidade digital com novo site, manifesto e landing emocional.'
-          }].map((projeto, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: idx * 0.2 }}
-              className="bg-[#1b0c2d] border border-[#4b2d6b] rounded-xl p-6 shadow-md hover:shadow-lg"
-            >
-              <h3 className="text-xl font-semibold text-[#f3e5f5] mb-2">{projeto.title}</h3>
-              <p className="text-[#d1c4e9] text-sm">{projeto.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* COMBOS DE SERVIÇOS */}
-      <section className="bg-[#2a153f] py-24 px-6 md:px-24 text-center">
-        <motion.h2
-          initial="hidden"
-          whileInView="visible"
-          variants={fadeInUp}
-          transition={{ duration: 1 }}
-          className="text-3xl md:text-4xl font-serif text-[#f3e5f5] mb-8"
-        >
-          Combos Ritualizados SUP3RA
-        </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-          {[{
-            title: 'Combo RITUAL DE PRESENÇA',
-            desc: 'Landing Page Sensorial + Manifesto de Marca + Diagnóstico Arquetípico. Ideal para quem está iniciando com alma.',
-            price: 'a partir de R$ 3.500'
-          }, {
-            title: 'Combo REENCARNAÇÃO DIGITAL',
-            desc: 'Rebranding completo com novo site, manifesto, tom de voz e storytelling simbólico.',
-            price: 'a partir de R$ 7.000'
-          }, {
-            title: 'Combo PRESENÇA CONTÍNUA',
-            desc: 'Pacote mensal de posts com copy simbólica, design emocional e hashtags ritualizadas.',
-            price: 'a partir de R$ 1.200/mês'
-          }].map((combo, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: idx * 0.2 }}
-              className="bg-[#1b0c2d] border border-[#4b2d6b] rounded-xl p-6 shadow-md hover:shadow-lg"
-            >
-              <h3 className="text-xl font-semibold text-[#f3e5f5] mb-2">{combo.title}</h3>
-              <p className="text-[#d1c4e9] text-sm mb-2">{combo.desc}</p>
-              <p className="text-[#cfcfcf] text-sm italic mb-4">{combo.price}</p>
-              <a
-                href="https://wa.me/SEUNUMERO?text=Olá,%20quero%20contratar%20o%20{encodeURIComponent(combo.title)}"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-2 bg-white text-black px-4 py-2 rounded-full text-sm hover:bg-[#f3e5f5] transition"
-              >
-                Solicitar este ritual
-              </a>
-            </motion.div>
-          ))}
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-[#241533] p-6 rounded-xl shadow">Marca A — Branding Sensorial</div>
+          <div className="bg-[#241533] p-6 rounded-xl shadow">Marca B — Comunicação Arquetípica</div>
+          <div className="bg-[#241533] p-6 rounded-xl shadow">Marca C — Presença Digital com Alma</div>
         </div>
       </section>
 
