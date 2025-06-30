@@ -1,76 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHNWSKLPSM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-LHNWSKLPSM');
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SUP3RA DIGITAL</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Sua marca não precisa aparecer. Ela precisa ser sentida." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#2a153f" />
+  <link rel="canonical" href="https://sup3radigital.site" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <title>SUP3RA DIGITAL | Marcas com Alma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom, #0c0c2c, #1d0e24);
+      background-color: #1b0c2d;
       color: white;
+      overflow-x: hidden;
+    }
+    section {
+      padding: 80px 24px;
+      text-align: center;
+    }
+    h1, h2 {
+      font-family: serif;
+      color: #f3e5f5;
+    }
+    .btn {
+      background: white;
+      color: black;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 16px;
+    }
+    .card {
+      background: #241533;
+      padding: 24px;
+      margin: 16px;
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .comment-box input, .comment-box textarea {
+      width: 100%;
+      background: #1f102f;
+      border: 1px solid #4b2d6b;
+      color: white;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 8px;
     }
     header {
-      background: url('https://cdn.jsdelivr.net/gh/henriquespe/sup3radigital-landing/assets/banner.jpg') no-repeat center;
-      background-size: cover;
-      padding: 100px 20px 80px;
       text-align: center;
+      padding: 40px 0 0;
     }
-    .logo {
-      max-width: 200px;
-      margin: 0 auto 20px;
-    }
-    .hero {
-      font-size: 2rem;
-      font-weight: 600;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.4;
-    }
-    .section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-    }
-    .cta {
-      margin-top: 30px;
-      background: #e2c13c;
-      padding: 14px 30px;
-      font-weight: bold;
-      color: #0c0c2c;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
+    header img {
+      max-width: 120px;
+      margin-bottom: 24px;
     }
   </style>
 </head>
 <body>
   <header>
-    <img class="logo" src="https://cdn.jsdelivr.net/gh/henriquespe/sup3radigital-landing/assets/logo.png" alt="Logo SUP3RA Digital">
-    <div class="hero">“Quero sentir minha marca — e ser lembrado por ela.”</div>
+    <img src="logo-sup3ra.png" alt="Logo SUP3RA Digital">
   </header>
-  <section class="section">
-    <h2>✨ Inteligência Simbólica & Branding com Alma</h2>
-    <p>Estratégias neuroemocionais, arquétipos de marca, comunicação simbólica e storytelling sensorial. Criamos presenças digitais que são sentidas — e lembradas.</p>
-    <a href="https://wa.me/5588999137231"><button class="cta">Vamos conversar</button></a>
+
+  <section>
+    <h1>Vamos transformar sua marca em uma experiência simbólica</h1>
+    <p>Agende um atendimento ritualizado e descubra como sentir a presença da sua marca.</p>
+    <a class="btn" href="https://wa.me/5588999137231" target="_blank">Agendar agora</a>
+  </section>
+
+  <section style="background:#160b24">
+    <h2>Para quem é a SUP3RA DIGITAL?</h2>
+    <p>✨ Empreendedores que acreditam que marca é alma.</p>
+    <p>🌀 Negócios que valorizam autenticidade, presença e sensibilidade.</p>
+    <p>🌱 Marcas que querem ser sentidas, não apenas vistas.</p>
+  </section>
+
+  <section>
+    <h2>Marcas que já foram ritualizadas</h2>
+    <div class="card">Marca A — Branding Sensorial</div>
+    <div class="card">Marca B — Comunicação Arquetípica</div>
+    <div class="card">Marca C — Presença Digital com Alma</div>
+  </section>
+
+  <section style="background:#160b24">
+    <h2>Compartilhe sua impressão</h2>
+    <form class="comment-box">
+      <input type="text" placeholder="Seu nome simbólico" required />
+      <textarea placeholder="Deixe seu comentário ritualizado..." rows="4" required></textarea>
+      <button class="btn" type="submit">Enviar Comentário</button>
+    </form>
   </section>
 </body>
 </html>
