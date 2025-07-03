@@ -13,9 +13,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
       padding: 20px;
+      position: relative;
     }
     a {
       display: inline-block;
@@ -28,21 +29,52 @@
       height: auto;
       border: 1px solid #644600;
       border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
     p {
       margin-top: 20px;
       font-size: 1.1rem;
       max-width: 600px;
     }
+    .signature {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #aaa;
+      font-style: italic;
+    }
+    .confidential {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: #555;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .whatsapp img {
+      width: 60px;
+      height: 60px;
+    }
   </style>
 </head>
 <body>
   <a href="https://drive.google.com/file/d/10OCpZxxR_OhzzEeAhWHx9sQLfmoDwfRQ/view?usp=sharing" target="_blank">
-    <img src="sensorial-banner.png" alt="Sensorial Script Banner" />
+    <img src="https://drive.google.com/uc?id=1YVScNzKQv-ejrs01M2_G8sGT1rrqp25W" alt="Sensorial Script Banner" />
   </a>
   <p>
     Projeto criado pelo agente da SUP3RA DIGITAL para O Boticário.<br />
     A proposta não foi enviada ainda oficialmente. Clique na imagem para visualizar.
   </p>
+  <div class="signature">
+    SUP3RA DIGITAL — IA simbólica e presença viva.
+  </div>
+  <div class="confidential">
+    Conteúdo confidencial. Não compartilhar sem autorização prévia.
+  </div>
+  <a href="https://wa.me/5588999137231" class="whatsapp" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
 </body>
 </html>
