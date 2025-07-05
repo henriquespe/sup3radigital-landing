@@ -1,14 +1,14 @@
-// memoryManager.js
+// memoryManager.mjs
 
-const { createClient } = require('@supabase/supabase-js');
+import { createClient } from '@supabase/supabase-js';
 
-// 🧠 Conectando ao Supabase
+// 🔗 Conectando ao Supabase
 const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_KEY
 );
 
-// ⚙️ Lógica de limpeza de memória
+// 🧹 Lógica de limpeza de memória
 async function cleanupOldMessages() {
   const { data, error } = await supabase
     .from('memoria_sup3ra')
@@ -17,7 +17,7 @@ async function cleanupOldMessages() {
     .limit(50000); // Apaga os 50 mil mais antigos
 
   if (error) {
-    console.error('Erro ao buscar mensagens antigas:', error);
+    console.error('❌ Erro ao buscar mensagens antigas:', error);
     return;
   }
 
@@ -30,14 +30,14 @@ async function cleanupOldMessages() {
       .in('id', idsToDelete);
 
     if (deleteError) {
-      console.error('Erro ao apagar mensagens antigas:', deleteError);
+      console.error('❌ Erro ao apagar mensagens antigas:', deleteError);
     } else {
       console.log(`✅ ${idsToDelete.length} mensagens antigas foram apagadas`);
     }
   } else {
-    console.log('📦 Nenhuma mensagem antiga a apagar');
+    console.log('🟤 Nenhuma mensagem antiga a apagar');
   }
 }
 
+// Executa a limpeza
 cleanupOldMessages();
-
