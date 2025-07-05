@@ -1,1 +1,29 @@
+name: Limpeza Automática da Memória
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # Executa diariamente às 3h da manhã UTC (00:00h no Brasil)
+  workflow_dispatch:     # Permite rodar manualmente também
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: Instalar dependências
+      run: npm install @supabase/supabase-js
+
+    - name: Executar limpeza de memória
+      env:
+        SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+        SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+      run: node scripts/memoryManager.js
 
