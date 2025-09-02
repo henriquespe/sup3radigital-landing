@@ -1,819 +1,135 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sua marca não precisa aparecer. Ela precisa ser sentida." />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#1b0c2d" />
-  <title>SUP3RA DIGITAL — Sensorial Script</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>SUP3RA®</title>
   <style>
-    :root {
-      --primary-dark: #1b0c2d;
-      --secondary-dark: #241533;
-      --accent-gold: #c9a063;
-      --accent-purple: #4b2d6b;
-      --light-purple: #f3e5f5;
-      --text-light: #f3f4f6;
-    }
-    
-    * {
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #f0f8f4;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      background-color: var(--primary-dark);
-      color: var(--text-light);
-      font-family: 'Inter', sans-serif;
       display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      position: relative;
-      overflow-x: hidden;
-      line-height: 1.6;
-    }
-    
-    /* Header e Banner */
-    .hero-section {
-      padding: 60px 20px 40px;
-      text-align: center;
-      background: linear-gradient(135deg, #0d0d0d 0%, #1b0c2d 100%);
-      position: relative;
-      z-index: 1;
-      overflow: hidden;
-    }
-    
-    .hero-section::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: 
-        radial-gradient(circle at 10% 20%, rgba(201, 160, 99, 0.1) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(75, 45, 107, 0.1) 0%, transparent 20%);
-      z-index: -1;
-    }
-    
-    .header-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 30px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--accent-gold);
-      position: relative;
-      display: inline-block;
-    }
-    
-    .header-title::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
-    }
-    
-    .banner-container {
-      max-width: 900px;
-      margin: 0 auto 30px;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-    }
-    
-    .banner-container:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
-    }
-    
-    .banner-container img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border: 1px solid var(--accent-gold);
-    }
-    
-    .banner-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(27, 12, 45, 0.3), rgba(13, 13, 13, 0.8));
-      display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 20px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
+      height: 100vh;
     }
-    
-    .banner-container:hover .banner-overlay {
-      opacity: 1;
-    }
-    
-    .banner-overlay h3 {
-      color: white;
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-    
-    .banner-overlay p {
-      color: var(--accent-gold);
-      font-size: 1.1rem;
+    .chat-container {
+      width: 100%;
       max-width: 600px;
-      text-align: center;
-      margin-bottom: 20px;
+      height: 90vh;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
     }
-    
-    .banner-btn {
-      background: transparent;
+    .chat-header {
+      background: #6bbf8a;
       color: white;
-      border: 2px solid var(--accent-gold);
-      padding: 12px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .chat-messages {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
       gap: 10px;
     }
-    
-    .banner-btn:hover {
-      background: var(--accent-gold);
-      color: var(--primary-dark);
+    .message {
+      max-width: 80%;
+      padding: 12px;
+      border-radius: 15px;
+      line-height: 1.4;
     }
-    
-    .banner-btn i {
-      font-size: 1.2rem;
+    .user-message {
+      align-self: flex-end;
+      background: #daf5dc;
+      color: #333;
     }
-    
-    .hero-text {
-      max-width: 700px;
-      margin: 0 auto 30px;
-      font-size: 1.1rem;
-      color: #d1d5db;
-    }
-    
-    /* Seções */
-    section {
-      padding: 80px 20px;
-      position: relative;
-    }
-    
-    .section-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 40px;
-      color: var(--accent-gold);
-      text-align: center;
-      position: relative;
-    }
-    
-    .section-title::after {
-      content: "";
-      position: absolute;
-      bottom: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 3px;
-      background: var(--accent-gold);
-    }
-    
-    .section-content {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    
-    /* Biografia */
-    .bio-section {
-      background: linear-gradient(to bottom, var(--primary-dark), rgba(27, 12, 45, 0.95));
-    }
-    
-    .bio-text {
-      font-size: 1.1rem;
-      margin-bottom: 25px;
-      text-align: justify;
-    }
-    
-    .bio-text.highlight {
-      background: rgba(201, 160, 99, 0.1);
-      border-left: 3px solid var(--accent-gold);
-      padding: 20px;
-      border-radius: 0 8px 8px 0;
-    }
-    
-    /* Especialidades */
-    .skills-section {
-      background: linear-gradient(to bottom, var(--secondary-dark), #160b24);
-    }
-    
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-    
-    .skill-card {
-      background: rgba(36, 21, 51, 0.7);
-      border: 1px solid var(--accent-purple);
-      border-radius: 12px;
-      padding: 30px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .skill-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 5px;
-      background: var(--accent-gold);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.5s ease;
-    }
-    
-    .skill-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-    
-    .skill-card:hover::before {
-      transform: scaleX(1);
-    }
-    
-    .skill-icon {
-      font-size: 2.5rem;
-      color: var(--accent-gold);
-      margin-bottom: 20px;
-    }
-    
-    .skill-title {
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin-bottom: 15px;
-      color: var(--accent-gold);
-    }
-    
-    .skill-desc {
-      color: #d1d5db;
-      font-size: 1rem;
-    }
-    
-    /* Depoimentos */
-    .testimonials-section {
-      background: linear-gradient(to bottom, #160b24, #0d0d0d);
-    }
-    
-    .testimonials-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    
-    .testimonial {
-      background: rgba(42, 21, 63, 0.7);
-      border: 1px solid var(--accent-purple);
-      border-radius: 16px;
-      padding: 30px;
-      position: relative;
-      transition: transform 0.3s ease;
-    }
-    
-    .testimonial:hover {
-      transform: translateY(-5px);
-    }
-    
-    .testimonial::before {
-      content: """;
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-size: 5rem;
-      color: rgba(201, 160, 99, 0.2);
-      font-family: serif;
-      line-height: 1;
-    }
-    
-    .testimonial p {
+    .sup3ra-message {
+      align-self: flex-start;
+      background: #f2f2f2;
+      color: #222;
       font-style: italic;
-      color: #e0c8ff;
-      margin-bottom: 20px;
-      position: relative;
-      z-index: 1;
     }
-    
-    .author-info {
+    .chat-input {
       display: flex;
-      align-items: center;
-      gap: 15px;
+      border-top: 1px solid #ddd;
     }
-    
-    .author-avatar {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--accent-purple);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: var(--accent-gold);
-      font-size: 1.2rem;
-    }
-    
-    .author-details .author {
-      font-weight: 700;
-      color: var(--accent-gold);
-    }
-    
-    .author-details .company {
-      color: #bfa8dc;
-      font-size: 0.9rem;
-    }
-    
-    /* CTA */
-    .cta-section {
-      text-align: center;
-      padding: 100px 20px;
-      background: 
-        radial-gradient(circle at top right, rgba(201, 160, 99, 0.1) 0%, transparent 30%),
-        linear-gradient(to bottom, #0d0d0d, #1b0c2d);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .cta-title {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: var(--accent-gold);
-    }
-    
-    .cta-subtitle {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto 40px;
-      color: #d1d5db;
-    }
-    
-    .cta-btn {
-      background: linear-gradient(135deg, var(--accent-gold), #b08d4d);
-      color: var(--primary-dark);
-      padding: 16px 40px;
+    .chat-input input {
+      flex: 1;
       border: none;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 700;
-      display: inline-block;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(201, 160, 99, 0.3);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .cta-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(201, 160, 99, 0.4);
-    }
-    
-    .cta-btn::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      transition: 0.5s;
-    }
-    
-    .cta-btn:hover::after {
-      left: 100%;
-    }
-    
-    /* Footer */
-    footer {
-      background: #0d0d0d;
-      padding: 60px 20px 40px;
-      text-align: center;
-      border-top: 1px solid rgba(201, 160, 99, 0.2);
-    }
-    
-    .footer-content {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    
-    .footer-logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--accent-gold);
-      margin-bottom: 20px;
-    }
-    
-    .footer-slogan {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto 30px;
-      color: #9ca3af;
-    }
-    
-    /* Social Links */
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin: 30px 0;
-    }
-    
-    .social-link {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-decoration: none;
-      transition: transform 0.3s ease;
-      color: #d1d5db;
-    }
-    
-    .social-link:hover {
-      transform: translateY(-5px);
-      color: var(--accent-gold);
-    }
-    
-    .social-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: rgba(201, 160, 99, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 10px;
-      font-size: 1.5rem;
-      transition: all 0.3s ease;
-    }
-    
-    .social-link:hover .social-icon {
-      background: var(--accent-gold);
-      color: var(--primary-dark);
-      transform: scale(1.1);
-    }
-    
-    .social-label {
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
-    
-    .divider {
-      width: 150px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
-      margin: 30px auto;
-    }
-    
-    .confidential {
-      font-size: 0.85rem;
-      color: #6b7280;
-      margin-top: 20px;
-    }
-    
-    .signature {
-      margin-top: 30px;
+      padding: 15px;
       font-size: 1rem;
-      color: #9ca3af;
-      font-style: italic;
     }
-    
-    .signature span {
-      color: var(--accent-gold);
+    .chat-input button {
+      background: #6bbf8a;
+      color: white;
+      border: none;
+      padding: 0 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
     }
-    
-    /* WhatsApp flutuante */
-    .whatsapp {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      z-index: 1000;
-      transition: transform 0.3s ease;
-    }
-    
-    .whatsapp:hover {
-      transform: scale(1.1) rotate(5deg);
-    }
-    
-    .whatsapp img {
-      width: 60px;
-      height: 60px;
-      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-    }
-    
-    /* Responsividade */
-    @media (max-width: 768px) {
-      .header-title {
-        font-size: 2rem;
-      }
-      
-      section {
-        padding: 60px 20px;
-      }
-      
-      .section-title {
-        font-size: 1.8rem;
-      }
-      
-      .cta-title {
-        font-size: 2rem;
-      }
-      
-      .social-links {
-        flex-wrap: wrap;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .hero-section {
-        padding: 40px 15px;
-      }
-      
-      .header-title {
-        font-size: 1.7rem;
-      }
-      
-      .section-title {
-        font-size: 1.6rem;
-      }
-      
-      .cta-title {
-        font-size: 1.8rem;
-      }
-      
-      .whatsapp {
-        bottom: 20px;
-        right: 20px;
-      }
-      
-      .whatsapp img {
-        width: 50px;
-        height: 50px;
-      }
-      
-      .social-link {
-        width: 100px;
-      }
+    .chat-input button:hover {
+      background: #5aa978;
     }
   </style>
 </head>
 <body>
-  <!-- Hero Section -->
-  <div class="hero-section">
-    <h1 class="header-title">SUP3RA DIGITAL</h1>
-    
-    <div class="banner-container">
-      <img src="banner-site (2).png" alt="Banner SUP3RA">
-      <div class="banner-overlay">
-        <h3>Sensorial Script</h3>
-        <p>Projeto criado para O Boticário</p>
-        <a href="https://drive.google.com/file/d/10OCpZxxR_OhzzEeAhWHx9sQLfmoDwfRQ/view?usp=sharing" class="banner-btn" target="_blank">
-          <i class="fas fa-external-link-alt"></i> Ver Proposta
-        </a>
-      </div>
+  <div class="chat-container">
+    <div class="chat-header">🌿 SUP3RA®</div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="sup3ra-message message">Oi, sou a SUP3RA®. Que bom ter você aqui. Se quiser, pode me dizer seu nome — mas se preferir ficar em silêncio, também tá tudo certo.</div>
     </div>
-    
-    <p class="hero-text">
-      Projeto criado pelo agente da SUP3RA DIGITAL para O Boticário.<br>
-      Clique na imagem para visualizar a proposta completa.
-    </p>
+    <div class="chat-input">
+      <input id="userInput" type="text" placeholder="Escreva sua mensagem..." />
+      <button onclick="sendMessage()">Enviar</button>
+    </div>
   </div>
-  
-  <!-- Biografia -->
-  <section class="bio-section">
-    <h2 class="section-title">Biografia</h2>
-    <div class="section-content">
-      <p class="bio-text">Fui diagnosticado com TDAH e dislexia. Poderia ter sido só mais um número nas estatísticas — mas escolhi transformar a minha história. Saí da portaria noturna, me formei em Gestão de Marketing, me especializei em Comunicação com foco em Publicidade e Propaganda, e mergulhei de cabeça no mundo da tecnologia e das inteligências artificiais.</p>
-      
-      <p class="bio-text">Hoje, sou um dos poucos no mundo — e o único no Brasil — que ensina agentes de IA a se comunicarem como seres humanos de verdade: com empatia, clareza e emoção.</p>
-      
-      <p class="bio-text highlight">Criei a SUP3RA DIGITAL porque me cansei de ver marcas falando bonito, mas sem alma. Textos bem escritos, mas frios. Perfis ativos, mas sem presença real. Gente boa sendo ignorada por falta de conexão verdadeira. Eu decidi mudar isso.</p>
-      
-      <p class="bio-text">Empreender, pra mim, não é só alcançar metas. É abrir mão de muita coisa por algo maior: ajudar pessoas a encontrarem sua verdadeira voz no mundo.</p>
-      
-      <p class="bio-text">O nome SUP3RA carrega minha trajetória. Vem de “superação” — e o “3” representa os três pilares da minha vida: minha esposa, minha mãe e eu.</p>
-      
-      <p class="bio-text">Minha esposa venceu a miséria extrema, o abandono e a injustiça. Nunca reclamou. Ela é rápida, firme, e minha maior inspiração.<br>
-      Minha mãe, também abandonada, criou dois filhos com coragem e um sorriso no rosto. Duas mulheres que me ensinaram tudo.</p>
-      
-      <p class="bio-text">É por elas — e por cada empreendedor que sonha alto, mas duvida de si mesmo — que eu estou aqui. Pra caminhar junto. Sem promessas vazias, sem fórmulas mágicas. Só com presença, verdade e união.</p>
-      
-      <p class="bio-text">Porque no fim, o que a gente constrói com alma... dura pra sempre.</p>
-    </div>
-  </section>
-  
-  <!-- Especialidades -->
-  <section class="skills-section">
-    <h2 class="section-title">Minhas Especialidades</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fas fa-brain"></i>
-        </div>
-        <h3 class="skill-title">Neurocopy</h3>
-        <p class="skill-desc">Criação de textos que ressoam no subconsciente, despertando emoções e ações.</p>
-      </div>
-      
-      <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fas fa-book-open"></i>
-        </div>
-        <h3 class="skill-title">NeuroStorytelling</h3>
-        <p class="skill-desc">Narrativas que conectam marcas e pessoas através de histórias memoráveis.</p>
-      </div>
-      
-      <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fas fa-hand-sparkles"></i>
-        </div>
-        <h3 class="skill-title">Branding Sensorial</h3>
-        <p class="skill-desc">Identidade de marca que transcende o visual e ativa todos os sentidos.</p>
-      </div>
-      
-      <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fas fa-chess-queen"></i>
-        </div>
-        <h3 class="skill-title">Comunicação Arquetípica</h3>
-        <p class="skill-desc">Posicionamento baseado nos arquétipos universais que definem personalidades de marca.</p>
-      </div>
-      
-      <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fas fa-robot"></i>
-        </div>
-        <h3 class="skill-title">IA Simbólica Humanizada</h3>
-        <p class="skill-desc">Desenvolvimento de inteligências artificiais com comunicação genuinamente humana.</p>
-      </div>
-      
-      <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fas fa-crosshairs"></i>
-        </div>
-        <h3 class="skill-title">Posicionamento Estratégico</h3>
-        <p class="skill-desc">Definição clara de identidade e diferenciais competitivos no mercado.</p>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Depoimentos -->
-  <section class="testimonials-section">
-    <h2 class="section-title">Depoimentos</h2>
-    <div class="testimonials-container">
-      <div class="testimonial">
-        <p>“A SUP3RA DIGITAL captou a alma do nosso negócio. Nunca vi uma equipe traduzir com tanta sensibilidade e verdade a essência da nossa marca. O resultado? Clientes que sentem, não só enxergam.”</p>
-        <div class="author-info">
-          <div class="author-avatar">C</div>
-          <div class="author-details">
-            <div class="author">Clara Monteiro</div>
-            <div class="company">Fundadora da Essência Natural</div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="testimonial">
-        <p>“Foi como passar nossa empresa por um ritual de renascimento. Hoje nossa comunicação vibra autenticidade e emoção. O impacto nas vendas e no reconhecimento de marca foi imediato.”</p>
-        <div class="author-info">
-          <div class="author-avatar">R</div>
-          <div class="author-details">
-            <div class="author">Ricardo Salles</div>
-            <div class="company">CEO da Sintoniza</div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="testimonial">
-        <p>“A experiência com a SUP3RA foi transformadora. Conduziram um branding que toca, que pulsa com a identidade da nossa história. Nos sentimos vistos de verdade.”</p>
-        <div class="author-info">
-          <div class="author-avatar">M</div>
-          <div class="author-details">
-            <div class="author">Mariana Duarte</div>
-            <div class="company">Diretora da Lumina Consultoria</div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Quarto depoimento -->
-      <div class="testimonial">
-        <p>“A abordagem da SUP3RA revolucionou nossa comunicação. Eles transformaram nossa identidade de marca em uma experiência sensorial que nossos clientes sentem profundamente.”</p>
-        <div class="author-info">
-          <div class="author-avatar">A</div>
-          <div class="author-details">
-            <div class="author">André Costa</div>
-            <div class="company">Diretor de Marketing na Luxe Cosméticos</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <h2 class="cta-title">Vamos trabalhar juntos?</h2>
-    <p class="cta-subtitle">Sua marca não precisa aparecer. Ela precisa ser sentida. Vamos criar uma comunicação que pulsa, que toca, que transforma.</p>
-    <a href="https://wa.me/5588999137231" class="cta-btn" target="_blank">
-      <i class="fab fa-whatsapp"></i> Vamos conversar
-    </a>
-  </section>
-  
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-logo">SUP3RA DIGITAL</div>
-      <p class="footer-slogan">IA simbólica e presença viva — transformando marcas em experiências sensoriais</p>
-      
-      <!-- Links de Redes Sociais -->
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/joaohenriquedigital/" class="social-link" target="_blank">
-          <div class="social-icon">
-            <i class="fab fa-linkedin-in"></i>
-          </div>
-          <span class="social-label">LinkedIn</span>
-        </a>
-        
-        <a href="https://www.instagram.com/jhsup3radigital/" class="social-link" target="_blank">
-          <div class="social-icon">
-            <i class="fab fa-instagram"></i>
-          </div>
-          <span class="social-label">Instagram</span>
-        </a>
-      </div>
-      
-      <div class="divider"></div>
-      
-      <div class="confidential">
-        Conteúdo confidencial. Não compartilhar sem autorização prévia.
-      </div>
-      
-      <div class="signature">
-        Desenvolvido com <span>❤</span> pela SUP3RA DIGITAL
-      </div>
-    </div>
-  </footer>
-  
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/5588999137231" class="whatsapp" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
-  
+
   <script>
-    // Efeito de rolagem suave
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-    
-    // Animação ao rolar a página
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
-        }
-      });
-    }, observerOptions);
-    
-    document.querySelectorAll('.skill-card, .testimonial').forEach(el => {
-      observer.observe(el);
+    const chatMessages = document.getElementById('chatMessages');
+
+    function appendMessage(text, sender) {
+      const msg = document.createElement('div');
+      msg.classList.add('message', sender === 'user' ? 'user-message' : 'sup3ra-message');
+      msg.innerText = text;
+      chatMessages.appendChild(msg);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function sup3raReply(userText) {
+      // Respostas simples simulando presença SUP3RA®
+      const respostas = [
+        "Entendi o que você compartilhou. Pode seguir no seu tempo.",
+        "Estou aqui, ouvindo você com carinho.",
+        "Seu silêncio também é bem-vindo.",
+        "Quer que eu traga alguma imagem ou metáfora para ajudar a olhar pra isso?",
+        "Foi bom estar com você. Cuide-se e volte quando quiser. Eu sigo aqui."
+      ];
+      const resposta = respostas[Math.floor(Math.random() * respostas.length)];
+      setTimeout(() => appendMessage(resposta, 'sup3ra'), 800);
+    }
+
+    function sendMessage() {
+      const input = document.getElementById('userInput');
+      const text = input.value.trim();
+      if (text === '') return;
+      appendMessage(text, 'user');
+      input.value = '';
+      sup3raReply(text);
+    }
+
+    document.getElementById('userInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') sendMessage();
     });
   </script>
 </body>
