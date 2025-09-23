@@ -9,16 +9,70 @@
   <meta name="color-scheme" content="dark">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Favicon/ícones -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Open Graph -->
   <meta property="og:title" content="Copy Nexialista — O Método">
   <meta property="og:description" content="Copy leve, afiada e precisa. Estrutura que converte sem pedir atenção.">
   <meta property="og:image" content="og-cover.jpg">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== Brand Tokens ===== */
+    :root{
+      --black:#0c0c0c; --gold:#d4af37; --gold-2:#bfa133;
+      --red:#8b0000; --white:#f5f5f5; --ice:#cfcfcf;
+      --serif:"Playfair Display",serif; --body:"Lora",serif;
+      --max:1000px; --pad:80px; --pad-m:56px;
+    }
+    @media (max-width: 720px){ :root{ --pad:56px; --pad-m:44px; } }
+    /* ===== Base ===== */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; background:var(--black); color:var(--white); font-family:var(--body); line-height:1.65}
+    img{max-width:100%; height:auto; display:block}
+    .wrap{max-width:var(--max); margin:0 auto; padding:var(--pad) 20px}
+    h1,h2,h3{font-family:var(--serif); margin:0 0 16px}
+    h1{font-size:44px; line-height:1.15}
+    h2{font-size:32px; line-height:1.2; margin-top:10px}
+    h3{font-size:22px; line-height:1.25}
+    p{margin:0 0 14px}
+    ul,ol{margin:0; padding-left:18px}
+    .muted{color:var(--ice)}
+    .badge{color:var(--gold); letter-spacing:.08em; text-transform:uppercase; font-size:12px}
+    .hr{height:1px; background:#191919; margin:28px 0}
+    .dim{color:#dadada}
+    /* ===== Blocks ===== */
+    .hero{text-align:center; padding-top:calc(var(--pad) + 12px)}
+    .selo{width:88px; margin:0 auto 12px; opacity:.95}
+    .sub{font-style:italic; margin-bottom:18px}
+    .cta{background:var(--gold); color:var(--black); text-decoration:none; font-weight:700;
+         padding:14px 28px; border-radius:4px; display:inline-block; transition:.28s}
+    .cta:hover{background:var(--gold-2)}
+    .cta-outline{border:1px solid var(--gold); color:var(--white); padding:12px 22px; border-radius:4px; text-decoration:none}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+    @media (max-width: 880px){ .grid{grid-template-columns:1fr} }
+    .highlight{background:#121212; border-left:4px solid var(--gold); padding:22px}
+    .quote{border-left:4px solid var(--gold); padding-left:14px; color:var(--ice); font-style:italic; margin:14px 0}
+    .card{background:#0f0f0f; border:1px solid #1b1b1b; padding:18px; border-radius:6px}
+    .list-check li{margin-bottom:10px}
+    .list-check li::marker{color:var(--gold)}
+    /* ===== Media ===== */
+    .video{position:relative; aspect-ratio:16/9; background:#101010; border:1px solid #1c1c1c}
+    .video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+    /* ===== A11y ===== */
+    @media (prefers-reduced-motion: reduce){
+      .cta{transition:none}
+    }
+    a:focus{outline:2px solid var(--gold); outline-offset:2px}
+    /* ===== Footer ===== */
+    footer{padding:var(--pad-m) 20px; text-align:center; color:var(--ice)}
+  </style>
 </head>
 <body>
+
+  <!-- HERO -->
   <header class="wrap hero">
     <img src="selo-cofre-original.png" alt="Selo Cofre Nexialista" class="selo">
     <div class="badge">Baseado no Manifesto</div>
@@ -27,9 +81,121 @@
     <a href="#checkout" class="cta">🔒 Quero acesso ao Método</a>
     <p class="muted" style="margin-top:10px">Copy leve, afiada e precisa.</p>
   </header>
+
+  <!-- VSL -->
+  <section class="wrap" id="vsl">
+    <h2>VSL (3–5 minutos)</h2>
+    <div class="video">
+      <!-- Substitua o src abaixo pelo seu player (YouTube/Vimeo) -->
+      <iframe src="" title="VSL — Copy Nexialista" allowfullscreen></iframe>
+    </div>
+    <p class="muted" style="margin-top:10px">Dica: thumbnail escura com o selo e a assinatura.</p>
+  </section>
+
+  <!-- DECLARAÇÃO -->
   <section class="wrap">
     <h2>Declaração Fundadora</h2>
     <p>Copywriting não é persuasão. É <strong>arquitetura mental</strong>. O Nexialista projeta estruturas invisíveis que guiam decisões, constroem crenças e moldam mercados. Não é sobre escrever bonito — é sobre escrever <strong>inevitável</strong>.</p>
   </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="wrap">
+    <h2>Benefícios do Método</h2>
+    <div class="grid">
+      <div class="card">
+        <ul class="list-check">
+          <li>Clareza estratégica que move decisões.</li>
+          <li>Conversões ampliadas com bisturis emocionais (medo, ambição, status).</li>
+          <li>Autoridade que se impõe — sua voz sai do ruído.</li>
+          <li>Aplicação em WhatsApp, e-mail, anúncios, redes e landing pages.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <ul class="list-check">
+          <li>Receita escalável e previsível, independente do nicho.</li>
+          <li>Objeções desarmadas antes de surgirem.</li>
+          <li>Arsenal comprovado de ângulos, provas e estruturas.</li>
+          <li>Vantagem competitiva contínua.</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:16px"><a href="#checkout" class="cta">🔒 Quero acesso ao Método</a></p>
+  </section>
+
+  <!-- CONTEÚDO -->
+  <section class="wrap">
+    <h2>O Conteúdo</h2>
+    <ol>
+      <li>Copy ≠ texto. É estratégia de impacto.</li>
+      <li>O papel real do copywriter: arquiteto de receita.</li>
+      <li>Briefing como raio-X.</li>
+      <li>Arsenal de ângulos estratégicos.</li>
+      <li>Cirurgia emocional (medo, ambição, status).</li>
+      <li>Gatilhos como alavancas, não truques.</li>
+      <li>Estrutura Nexialista de copy.</li>
+      <li>Adaptação por canal.</li>
+      <li>Casos reais (Suplemento, Infoproduto, E-commerce, SaaS, Coaching).</li>
+      <li>Execução profissional: de redator a operador.</li>
+    </ol>
+  </section>
+
+  <!-- BÔNUS -->
+  <section class="wrap">
+    <h2>Bônus Estratégicos</h2>
+    <ul>
+      <li><strong>Dicionário de Termos Ilegais</strong> — 49 expressões de comando.</li>
+      <li><strong>Arquitetura da Página Invisível</strong> — blueprint premium.</li>
+      <li><strong>Banco de Ângulos</strong> — 30 ângulos letais prontos.</li>
+      <li><strong>Diagnóstico: Método da Fratura</strong> — checklist cirúrgico.</li>
+      <li><strong>Proposta de Valor Invisível</strong> — venda premium sem apelar.</li>
+    </ul>
+    <p style="margin-top:16px"><a href="#checkout" class="cta">🔒 Quero acesso ao Método</a></p>
+  </section>
+
+  <!-- PROVA SOCIAL -->
+  <section class="wrap">
+    <h2>📊 Resultados Reais (Confidenciais)</h2>
+    <p class="quote">“Depois de aplicar o ângulo Nexialista, nossa taxa de conversão triplicou. E a sensação de controle também.” — Fundador de skincare premium</p>
+    <p class="quote">“Só trocando a abertura, reduzimos CAC em 41%. Não voltamos ao modelo antigo.” — Startup B2B educacional</p>
+    <p class="quote">“Não é sobre escrever bonito. É sobre arquivar decisões no leitor.” — Especialista em lançamentos</p>
+  </section>
+
+  <!-- INVESTIMENTO -->
+  <section class="wrap highlight" id="checkout">
+    <h2>💼 Investimento</h2>
+    <p><strong>R$ 497 à vista</strong> ou <strong>12× de R$ 48,42</strong></p>
+    <p>Acesso vitalício • Bônus desbloqueados • Atualizações futuras</p>
+    <p><a href="SUA-URL-DE-CHECKOUT" class="cta">🔒 Liberar meu acesso</a></p>
+    <p class="muted">O valor sobe a cada nova leva.</p>
+  </section>
+
+  <!-- GARANTIA -->
+  <section class="wrap highlight">
+    <h2>🔐 Compromisso Nexialista: Clareza ou Dinheiro de Volta</h2>
+    <p>Aplique os princípios. Use o método. Se você <strong>não perceber clareza estratégica real</strong> na sua comunicação, devolvemos <strong>100% do seu investimento</strong>.</p>
+    <p><em>Sem formulários. Sem perguntas. Sem scripts.</em></p>
+  </section>
+
+  <!-- ESCASSEZ -->
+  <section class="wrap">
+    <h2>⚠️ Acesso Limitado</h2>
+    <p>Este método <strong>não será vendido em massa</strong>. Não por hype — por estratégia. Esta página pode sair do ar a qualquer momento.</p>
+  </section>
+
+  <!-- FECHO -->
+  <section class="wrap" style="text-align:center;">
+    <h2>Fecho</h2>
+    <p>O mercado não recompensa esforço. Recompensa domínio.</p>
+    <p>Você vai continuar observando… ou assumir o comando?</p>
+    <p><a href="SUA-URL-DE-CHECKOUT" class="cta">🔒 Quero acesso ao Método</a></p>
+    <p class="muted">Copy leve, afiada e precisa.</p>
+  </section>
+
+  <footer>
+    <img src="selo-lamina-mini.png" alt="" style="width:26px; opacity:.8; display:block; margin:0 auto 8px">
+    <small>© Copy Nexialista — O Método. Todos os direitos reservados.</small>
+  </footer>
+
 </body>
 </html>
+
