@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Venda Invisível™ — Como iniciar conversas que viram propostas sem postar conteúdo, sem call e sem performance.">
-  <meta name="robots" content="index, follow">
   <title>Venda Invisível™</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -17,14 +16,14 @@
       background:#ffffff;
       color:#111111;
     }
-    a{color:inherit;text-decoration:none}
+    a{text-decoration:none;color:inherit}
     .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 
     /* TOPO */
     .topbar{
       position:sticky;
       top:0;
-      background:#ffffff;
+      background:#fff;
       border-bottom:1px solid #e5e5e5;
       z-index:10;
     }
@@ -34,40 +33,21 @@
       align-items:center;
       padding:16px 0;
     }
-    .brand{
-      font-weight:800;
-      font-size:18px;
-    }
-    nav a{
-      margin-left:16px;
-      font-size:14px;
-      color:#444;
-    }
+    .brand{font-weight:800;font-size:18px}
+    nav a{margin-left:16px;font-size:14px;color:#444}
 
     /* HERO */
-    .hero{
-      padding:60px 0;
-    }
+    .hero{padding:70px 0}
     .hero-grid{
       display:grid;
       grid-template-columns:1.1fr .9fr;
-      gap:32px;
+      gap:40px;
       align-items:center;
     }
-    h1{
-      font-size:42px;
-      line-height:1.1;
-      margin-bottom:16px;
-    }
-    h2{
-      font-size:28px;
-      margin-bottom:12px;
-    }
-    p{
-      font-size:16px;
-      line-height:1.7;
-      color:#333;
-    }
+    h1{font-size:42px;line-height:1.1;margin-bottom:16px}
+    h2{font-size:28px;margin-bottom:12px}
+    p{font-size:16px;line-height:1.7;color:#333}
+
     .cta-row{
       margin-top:24px;
       display:flex;
@@ -79,40 +59,28 @@
       border-radius:999px;
       font-weight:700;
       border:1px solid #000;
-      background:#fff;
       cursor:pointer;
     }
     .btn.primary{
       background:#000;
       color:#fff;
     }
-    .btn.secondary{
-      background:#fff;
-      color:#000;
+    .btn.whatsapp{
+      background:#25D366;
+      color:#fff;
+      border-color:#25D366;
     }
-    .note{
-      margin-top:12px;
-      font-size:13px;
-      color:#666;
-    }
+    .note{margin-top:12px;font-size:13px;color:#666}
 
-    .hero-media{
-      border:1px solid #e5e5e5;
-      padding:16px;
-      border-radius:12px;
-    }
-    .img{
+    .mockup{
       width:100%;
-      margin-bottom:12px;
-    }
-    .badge{
-      width:90px;
-      margin-bottom:12px;
+      border:1px solid #ddd;
+      border-radius:12px;
     }
 
     /* SEÇÕES */
     .section{
-      padding:60px 0;
+      padding:70px 0;
       border-top:1px solid #eee;
     }
 
@@ -120,8 +88,8 @@
     .story-grid{
       display:grid;
       grid-template-columns:.9fr 1.1fr;
-      gap:32px;
-      align-items:center;
+      gap:40px;
+      align-items:flex-start;
       margin-top:24px;
     }
     .story-img{
@@ -136,9 +104,11 @@
       text-align:center;
       border-top:1px solid #eee;
     }
-    .panel{
-      max-width:760px;
-      margin:0 auto;
+
+    .badge{
+      width:120px;
+      margin:30px auto 0;
+      display:block;
     }
 
     footer{
@@ -150,12 +120,9 @@
     }
 
     @media(max-width:900px){
-      .hero-grid,
-      .story-grid{
-        grid-template-columns:1fr;
-      }
-      nav{display:none}
+      .hero-grid,.story-grid{grid-template-columns:1fr}
       h1{font-size:34px}
+      nav{display:none}
     }
   </style>
 </head>
@@ -167,7 +134,6 @@
   <div class="wrap inner">
     <div class="brand">VENDA INVISÍVEL™</div>
     <nav>
-      <a href="#como">Como funciona</a>
       <a href="#historia">Quem está por trás</a>
       <a href="#comprar">Acessar</a>
     </nav>
@@ -190,7 +156,7 @@
           <a class="btn primary" href="https://pay.kiwify.com.br/gD34AOl" id="comprar">
             Acessar agora
           </a>
-          <a class="btn secondary" href="https://wa.me/5588996080011" target="_blank">
+          <a class="btn whatsapp" href="https://wa.me/5588996080011" target="_blank">
             Suporte • WhatsApp
           </a>
         </div>
@@ -200,25 +166,12 @@
         </div>
       </div>
 
-      <div class="hero-media">
-        <img src="garantia-30dias.png" class="badge" alt="Garantia 30 dias">
-        <img src="capa-venda-invisivel.png" class="img" alt="Venda Invisível">
-        <img src="box-venda-invisivel.png" class="img" alt="Mockup Venda Invisível">
-      </div>
+      <!-- MOCKUP AO LADO DA HEADLINE -->
+      <img src="box-venda-invisivel.png" alt="Venda Invisível Mockup" class="mockup">
     </div>
   </section>
 
-  <!-- COMO FUNCIONA -->
-  <section class="section" id="como">
-    <h2>Não é marketing. É execução.</h2>
-    <p>
-      O Venda Invisível™ resolve o travamento antes da venda.
-      Você não estuda, não adapta e não improvisa.
-      Apenas executa o que está pronto.
-    </p>
-  </section>
-
-  <!-- HISTÓRIA -->
+  <!-- HISTÓRIA COMPLETA -->
   <section class="section" id="historia">
     <h2>Quem está por trás</h2>
 
@@ -227,39 +180,80 @@
 
       <div>
         <p>
-          Meu nome é <strong>João Henrique</strong>.
-          Fui diagnosticado com TDAH e dislexia.
-          Poderia ter sido só mais um número — não aceitei.
+          Olá, eu sou <strong>João Henrique</strong>.  
+          Fui diagnosticado com TDAH e dislexia. Poderia ter sido só mais um número nas estatísticas,
+          mas escolhi mudar a minha vida na raça.
         </p>
+
         <p>
-          Trabalhei em portaria noturna, estudei tecnologia,
-          marketing e comunicação, e entrei no mundo da IA na prática.
+          Saí da portaria noturna, me formei em Gestão de TI e Marketing,
+          me especializei em Comunicação com foco em Publicidade e Propaganda
+          e mergulhei de cabeça no mundo da tecnologia e das inteligências artificiais.
         </p>
+
         <p>
-          Criei o <strong>Venda Invisível™</strong> para quem quer vender
-          com clareza, dignidade e sem promessas vazias.
+          Hoje, sou um dos poucos no mundo — e o único no Brasil —
+          que ensina agentes de IA a se comunicarem com empatia, clareza,
+          honestidade e emoção, sem simular humanidade.
+        </p>
+
+        <p>
+          Criei o <strong>Venda Invisível™</strong> porque me cansei de ver
+          gente falando bonito, prometendo mundos e fundos,
+          mas entregando apenas frustração.
+        </p>
+
+        <p>
+          Não prometo riqueza nem carrões.
+          Tudo o que faço é com amor, verdade e trabalho.
+          Dá para você e sua família terem uma vida confortável
+          sem precisar enganar ninguém.
+        </p>
+
+        <p>
+          Criei a <strong>SUP3RA DIGITAL</strong>.
+          O nome vem de superação, e o “3” representa
+          os três pilares da minha vida: minha esposa, minha mãe e eu.
+        </p>
+
+        <p>
+          Minha esposa venceu a miséria extrema, o abandono e a injustiça.
+          Nunca reclamou. É rápida, firme e minha maior inspiração.
+          Minha mãe, também abandonada, criou dois filhos com coragem e um sorriso no rosto.
+        </p>
+
+        <p>
+          É por elas — e por cada trabalhador CLT como eu fui,
+          que sonha alto e acha que não consegue vencer —
+          que eu estou aqui.
+        </p>
+
+        <p>
+          Vamos caminhar juntos.
+          Sem promessas vazias.
+          Sem fórmulas mágicas.
+          Só com presença, verdade, trabalho e união.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- CTA FINAL -->
+  <!-- CTA FINAL + SELO -->
   <section class="final-cta">
-    <div class="panel">
-      <h2>Pronto para executar com clareza?</h2>
-      <p>Sem palco. Sem performance. Um dia por vez.</p>
+    <h2>Pronto para executar com clareza?</h2>
+    <p>Sem palco. Sem performance. Um dia por vez.</p>
 
-      <div class="cta-row" style="justify-content:center">
-        <a class="btn primary" href="https://pay.kiwify.com.br/gD34AOl">
-          Acessar o Venda Invisível™
-        </a>
-        <a class="btn secondary" href="https://wa.me/5588996080011" target="_blank">
-          Suporte • WhatsApp
-        </a>
-      </div>
-
-      <div class="note">Valor: R$497 • Garantia de 30 dias</div>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn primary" href="https://pay.kiwify.com.br/gD34AOl">
+        Acessar o Venda Invisível™
+      </a>
+      <a class="btn whatsapp" href="https://wa.me/5588996080011" target="_blank">
+        Suporte • WhatsApp
+      </a>
     </div>
+
+    <!-- SELO NO FIM -->
+    <img src="garantia-30dias.png" alt="Garantia de 30 dias" class="badge">
   </section>
 
 </main>
