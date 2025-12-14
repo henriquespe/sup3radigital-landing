@@ -19,7 +19,6 @@
     a{text-decoration:none;color:inherit}
     .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 
-    /* TOPO */
     .topbar{
       position:sticky;
       top:0;
@@ -36,7 +35,6 @@
     .brand{font-weight:800;font-size:18px}
     nav a{margin-left:16px;font-size:14px;color:#444}
 
-    /* HERO */
     .hero{padding:70px 0}
     .hero-grid{
       display:grid;
@@ -79,19 +77,8 @@
       border-radius:12px;
     }
 
-    /* SEÇÕES */
-    .section{
-      padding:70px 0;
-      border-top:1px solid #eee;
-    }
-
-    /* COPY ANTES DA HISTÓRIA */
-    .pre-story{
-      max-width:760px;
-      margin:0 auto 40px;
-    }
-
-    /* HISTÓRIA */
+    .section{padding:70px 0;border-top:1px solid #eee}
+    .pre-story{max-width:760px;margin:0 auto 40px}
     .story-grid{
       display:grid;
       grid-template-columns:.9fr 1.1fr;
@@ -105,7 +92,6 @@
       border:1px solid #ddd;
     }
 
-    /* CTA FINAL */
     .final-cta{
       padding:80px 0;
       text-align:center;
@@ -116,6 +102,19 @@
       width:120px;
       margin:30px auto 0;
       display:block;
+    }
+
+    .timer{
+      font-size:18px;
+      font-weight:600;
+      color:#ff0000;
+      margin-top:12px;
+    }
+
+    .old-price{
+      text-decoration: line-through;
+      color: #888;
+      margin-right: 12px;
     }
 
     footer{
@@ -133,10 +132,8 @@
     }
   </style>
 </head>
-
 <body>
 
-<!-- TOPO -->
 <div class="topbar">
   <div class="wrap inner">
     <div class="brand">VENDA INVISÍVEL™</div>
@@ -149,156 +146,84 @@
 
 <main class="wrap">
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-grid">
       <div>
         <h1>Como iniciar conversas que viram propostas — sem aparecer.</h1>
-        <p>
-          Um sistema simples e executável para quem presta serviço
-          e trava na hora de começar a vender.
-        </p>
+        <p>Um sistema simples e executável para quem presta serviço e trava na hora de começar a vender.</p>
 
         <div class="cta-row">
-          <a class="btn primary" href="https://pay.kiwify.com.br/gD34AOl" id="comprar">
-            Acessar o Venda Invisível™
-          </a>
-          <a class="btn whatsapp" href="https://wa.me/5588996080011" target="_blank">
-            Suporte • WhatsApp
-          </a>
+          <a class="btn primary" href="https://pay.kiwify.com.br/gD34AOl" id="comprar">Acessar agora</a>
+          <a class="btn whatsapp" href="https://wa.me/5588996080011" target="_blank">Suporte • WhatsApp</a>
         </div>
 
         <div class="note">
-          Sistema passo a passo • Uma ação por dia • Garantia de 30 dias
+          De <span class="old-price">R$2997</span> por apenas <strong>R$497</strong><br>
+          Parcelamento em até 12x • Garantia incondicional de 30 dias
         </div>
+
+        <div class="timer" id="countdown"></div>
       </div>
 
-      <!-- MOCKUP -->
       <img src="box-venda-invisivel.png" alt="Venda Invisível Mockup" class="mockup">
     </div>
   </section>
 
-  <!-- COPY ESTRATÉGICA -->
   <section class="section">
     <div class="pre-story">
       <h2>Venda serviços sem postar conteúdo, sem call e sem virar outra pessoa para vender.</h2>
-
-      <p>
-        Se você sabe entregar valor, mas trava ao iniciar conversas,
-        o problema não é marketing.
-        <strong>É excesso de decisão no momento errado.</strong>
-      </p>
-
-      <p>
-        Isso não é curso nem persuasão.
-        É um sistema de 7 dias, com 1 ação por dia,
-        scripts prontos e ordem fixa para executar sem pensar demais.
-      </p>
-
-      <p>
-        Não promete dinheiro.
-        <strong>Promete avanço real:</strong>
-        conversas claras, propostas enviadas e menos travamento.
-      </p>
+      <p>Se você sabe entregar valor, mas trava ao iniciar conversas, o problema não é marketing. <strong>É excesso de decisão no momento errado.</strong></p>
+      <p>Isso não é curso nem persuasão. É um sistema de 7 dias, com 1 ação por dia, scripts prontos e ordem fixa para executar sem pensar demais.</p>
+      <p><strong>Promete avanço real:</strong> conversas claras, propostas enviadas e menos travamento.</p>
     </div>
   </section>
 
-  <!-- HISTÓRIA -->
   <section class="section" id="historia">
     <h2>Quem está por trás</h2>
-
     <div class="story-grid">
       <img src="foto-joao-henrique.png" alt="João Henrique" class="story-img">
-
       <div>
-        <p>
-          Olá, eu sou <strong>João Henrique</strong>.
-          Fui diagnosticado com TDAH e dislexia.
-          Poderia ter sido só mais um número nas estatísticas,
-          mas escolhi mudar a minha vida na raça.
-        </p>
-
-        <p>
-          Saí da portaria noturna, me formei em Gestão de TI e Marketing,
-          me especializei em Comunicação com foco em Publicidade e Propaganda
-          e mergulhei de cabeça no mundo da tecnologia e das inteligências artificiais.
-        </p>
-
-        <p>
-          Hoje, sou um dos poucos no mundo — e o único no Brasil —
-          que ensina agentes de IA a se comunicarem com empatia, clareza,
-          honestidade e emoção, sem simular humanidade.
-        </p>
-
-        <p>
-          Criei o <strong>Venda Invisível™</strong> porque me cansei de ver
-          muita gente falando bonito, prometendo demais
-          e entregando apenas frustração.
-        </p>
-
-        <p>
-          Não prometo riqueza nem carrões.
-          Tudo o que faço é com amor, verdade e trabalho.
-          Dá para você e sua família terem uma vida confortável
-          sem precisar enganar ninguém.
-        </p>
-
-        <p>
-          Criei a <strong>SUP3RA DIGITAL</strong>.
-          O nome vem de superação,
-          e o “3” representa os três pilares da minha vida:
-          minha esposa, minha mãe e eu.
-        </p>
-
-        <p>
-          Minha esposa venceu a miséria extrema, o abandono e a injustiça.
-          Nunca reclamou.
-          Minha mãe, também abandonada,
-          criou dois filhos com coragem e um sorriso no rosto.
-        </p>
-
-        <p>
-          É por elas — e por cada trabalhador CLT como eu fui,
-          que sonha alto e acha que não consegue vencer —
-          que eu estou aqui.
-        </p>
-
-        <p>
-          Vamos caminhar juntos.
-          Sem promessas vazias.
-          Sem fórmulas mágicas.
-          Só com presença, verdade, trabalho e união.
-        </p>
+        <p>Olá, eu sou <strong>João Henrique</strong>. Fui diagnosticado com TDAH e dislexia. Poderia ter sido só mais um número nas estatísticas, mas escolhi mudar a minha vida na raça.</p>
+        <p>Saí da portaria noturna, me formei em Gestão de TI e Marketing, e mergulhei no mundo da tecnologia e IA.</p>
+        <p>Hoje, sou um dos poucos que ensinam IA com empatia real. Criei o <strong>Venda Invisível™</strong> para quem trava na venda, mas quer viver disso com verdade.</p>
       </div>
     </div>
   </section>
 
-  <!-- CTA FINAL -->
   <section class="final-cta">
     <h2>Pronto para executar com clareza?</h2>
     <p>Sem palco. Sem performance. Um dia por vez.</p>
 
     <div class="cta-row" style="justify-content:center">
-      <a class="btn primary" href="https://pay.kiwify.com.br/gD34AOl">
-        Acessar o Venda Invisível™
-      </a>
-      <a class="btn whatsapp" href="https://wa.me/5588996080011" target="_blank">
-        Suporte • WhatsApp
-      </a>
+      <a class="btn primary" href="https://pay.kiwify.com.br/gD34AOl">Acessar agora</a>
+      <a class="btn whatsapp" href="https://wa.me/5588996080011" target="_blank">Falar no WhatsApp</a>
     </div>
 
-    <!-- SELO -->
     <img src="garantia-30dias.png" alt="Garantia de 30 dias" class="badge">
   </section>
 
 </main>
 
 <footer>
-  © <span id="year"></span> Venda Invisível™
+  © <span id="year"></span> Venda Invisível™ — SUP3RA DIGITAL
 </footer>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // CONTADOR REGRESSIVO (24h padrão)
+  const countdown = document.getElementById("countdown");
+  const target = new Date();
+  target.setDate(target.getDate() + 1);
+  function updateCountdown() {
+    const now = new Date();
+    const diff = target - now;
+    const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, "0");
+    const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, "0");
+    const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, "0");
+    countdown.textContent = `Oferta disponível por: ${hours}:${minutes}:${seconds}`;
+  }
+  setInterval(updateCountdown, 1000);
 </script>
 
 </body>
