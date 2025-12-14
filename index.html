@@ -3,228 +3,266 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Venda Invisível™ — Venda serviços sem postar conteúdo, sem call e sem virar outra pessoa para vender.">
   <title>Venda Invisível™</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
   <style>
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter, Arial, sans-serif;
-      background:#ffffff;
-      color:#111111;
-    }
-    a{text-decoration:none;color:inherit}
-    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-
-    .topbar{
-      position:sticky;
-      top:0;
-      background:#fff;
-      border-bottom:1px solid #e5e5e5;
-      z-index:10;
-    }
-    .topbar .inner{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:16px 0;
-    }
-    .brand{font-weight:800;font-size:18px}
-    nav a{margin-left:16px;font-size:14px;color:#444}
-
-    .hero{padding:70px 0}
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:40px;
-      align-items:center;
-    }
-    h1{font-size:42px;line-height:1.1;margin-bottom:16px}
-    h2{font-size:28px;margin-bottom:12px}
-    h3{font-size:20px;margin-bottom:10px}
-    p{font-size:16px;line-height:1.7;color:#333}
-
-    .cta-row{
-      margin-top:24px;
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-    .btn{
-      padding:14px 22px;
-      border-radius:999px;
-      font-weight:700;
-      border:1px solid #000;
-      cursor:pointer;
-    }
-    .btn.primary{
-      background:#000;
-      color:#fff;
-    }
-    .btn.whatsapp{
-      background:#25D366;
-      color:#fff;
-      border-color:#25D366;
-    }
-    .note{margin-top:12px;font-size:13px;color:#666}
-
-    .mockup{
-      width:100%;
-      border:1px solid #ddd;
-      border-radius:12px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #000;
     }
 
-    .section{padding:70px 0;border-top:1px solid #eee}
-    .pre-story{max-width:760px;margin:0 auto 40px}
-    .story-grid{
-      display:grid;
-      grid-template-columns:.9fr 1.1fr;
-      gap:40px;
-      align-items:flex-start;
-      margin-top:24px;
-    }
-    .story-img{
-      width:100%;
-      border-radius:12px;
-      border:1px solid #ddd;
+    body {
+      background: #fff;
+      line-height: 1.5;
     }
 
-    .final-cta{
-      padding:80px 0;
-      text-align:center;
-      border-top:1px solid #eee;
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
-    .badge{
-      width:120px;
-      margin:30px auto 0;
-      display:block;
+    h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
     }
 
-    .timer{
-      font-size:18px;
-      font-weight:600;
-      color:#ff0000;
-      margin-top:12px;
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
     }
 
-    .old-price{
+    p {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero img {
+      max-width: 320px;
+      width: 100%;
+    }
+
+    .price {
+      font-size: 28px;
+      margin: 20px 0;
+    }
+
+    .price span {
       text-decoration: line-through;
-      color: #888;
-      margin-right: 12px;
+      opacity: 0.5;
+      margin-right: 10px;
     }
 
-    footer{
-      padding:24px 0;
-      text-align:center;
-      font-size:12px;
-      color:#777;
-      border-top:1px solid #eee;
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
     }
 
-    @media(max-width:900px){
-      .hero-grid,.story-grid{grid-template-columns:1fr}
-      h1{font-size:34px}
-      nav{display:none}
+    .btn {
+      padding: 15px 25px;
+      font-size: 16px;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-black {
+      background: #000;
+      color: #fff;
+    }
+
+    .btn-green {
+      background: #25D366;
+      color: #fff;
+    }
+
+    .counter {
+      margin-top: 15px;
+      font-size: 16px;
+      opacity: 0.8;
+    }
+
+    .section {
+      margin-top: 80px;
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    .about {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .about img {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .seal {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .seal img {
+      max-width: 160px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      margin: 40px 0;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 32px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<div class="topbar">
-  <div class="wrap inner">
-    <div class="brand">VENDA INVISÍVEL™</div>
-    <nav>
-      <a href="#historia">Quem está por trás</a>
-      <a href="#comprar">Acessar</a>
-    </nav>
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Venda serviços sem postar conteúdo, sem call e sem virar outra pessoa para vender.</h1>
+
+        <p>
+          Se você sabe entregar valor, mas trava ao iniciar conversas, o problema não é marketing.
+          <strong>É excesso de decisão no momento errado.</strong>
+        </p>
+
+        <p>
+          Isso não é curso nem persuasão.  
+          É um sistema de 7 dias, com 1 ação por dia, scripts prontos e ordem fixa para executar sem pensar demais.
+        </p>
+
+        <div class="price">
+          <span>R$2.997</span> <strong>R$497 à vista</strong>
+        </div>
+
+        <div class="buttons">
+          <a class="btn btn-black" href="https://pay.kiwify.com.br/gD34AOl">Acessar o Venda Invisível™</a>
+          <a class="btn btn-green" href="https://wa.me/5588996080011">Suporte • WhatsApp</a>
+        </div>
+
+        <div class="counter">
+          ⏳ Oferta disponível por tempo limitado
+        </div>
+      </div>
+
+      <img src="mockup.png" alt="Mockup Venda Invisível">
+    </div>
+
+    <!-- PROVA SOCIAL -->
+    <div class="section">
+      <h2>O que falaram depois de aplicar o sistema</h2>
+
+      <div class="testimonials">
+        <div class="card">
+          “Eu achava que precisava virar influencer pra vender meu serviço.  
+          No terceiro dia do sistema, fechei um pacote de R$1.200 só com mensagem.”  
+          <br><br><strong>Juliana R.</strong>
+        </div>
+
+        <div class="card">
+          “Achei simples demais… até ver meus primeiros contatos respondendo.  
+          Virei fã.”  
+          <br><br><strong>Pedro M.</strong>
+        </div>
+
+        <div class="card">
+          “Só fiz o dia 1 e 2… uma cliente antiga voltou e fechou.”  
+          <br><br><strong>Larissa S.</strong>
+        </div>
+
+        <div class="card">
+          “Tenho TDAH e odeio estratégia confusa.  
+          Isso me deu paz mental.”  
+          <br><br><strong>Rafael D.</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- HISTÓRIA -->
+    <div class="section">
+      <div class="about">
+
+        <img src="foto-joao.jpg" alt="João Henrique">
+
+        <div>
+          <p><strong>Olá, eu sou João Henrique.</strong></p>
+
+          <p>
+            Fui diagnosticado com TDAH e dislexia.  
+            Poderia ter sido só mais um número, mas escolhi mudar minha vida.
+          </p>
+
+          <p>
+            Saí da portaria noturna, me formei, me especializei em tecnologia,
+            comunicação e IA, e criei o sistema que eu gostaria de ter encontrado
+            quando ninguém acreditava em mim.
+          </p>
+
+          <p>
+            O Venda Invisível™ não é sobre prometer riqueza.  
+            É sobre clareza, conversa honesta e construção real.
+          </p>
+
+          <p>
+            Se você não quer gritar, aparecer ou virar personagem pra vender,
+            você está no lugar certo.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- GARANTIA -->
+    <div class="seal">
+      <img src="selo-30dias.png" alt="Garantia de 30 dias">
+      <p>Garantia incondicional de 30 dias</p>
+    </div>
+
+    <footer>
+      © 2025 • Venda Invisível™ • Suporte: (88) 99608-0011
+    </footer>
+
   </div>
-</div>
-
-<main class="wrap">
-
-  <section class="hero">
-    <div class="hero-grid">
-      <div>
-        <h1>Como iniciar conversas que viram propostas — sem aparecer.</h1>
-        <p>Um sistema simples e executável para quem presta serviço e trava na hora de começar a vender.</p>
-
-        <div class="cta-row">
-          <a class="btn primary" href="https://pay.kiwify.com.br/gD34AOl" id="comprar">Acessar agora</a>
-          <a class="btn whatsapp" href="https://wa.me/5588996080011" target="_blank">Suporte • WhatsApp</a>
-        </div>
-
-        <div class="note">
-          De <span class="old-price">R$2997</span> por apenas <strong>R$497</strong><br>
-          Parcelamento em até 12x • Garantia incondicional de 30 dias
-        </div>
-
-        <div class="timer" id="countdown"></div>
-      </div>
-
-      <img src="box-venda-invisivel.png" alt="Venda Invisível Mockup" class="mockup">
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="pre-story">
-      <h2>Venda serviços sem postar conteúdo, sem call e sem virar outra pessoa para vender.</h2>
-      <p>Se você sabe entregar valor, mas trava ao iniciar conversas, o problema não é marketing. <strong>É excesso de decisão no momento errado.</strong></p>
-      <p>Isso não é curso nem persuasão. É um sistema de 7 dias, com 1 ação por dia, scripts prontos e ordem fixa para executar sem pensar demais.</p>
-      <p><strong>Promete avanço real:</strong> conversas claras, propostas enviadas e menos travamento.</p>
-    </div>
-  </section>
-
-  <section class="section" id="historia">
-    <h2>Quem está por trás</h2>
-    <div class="story-grid">
-      <img src="foto-joao-henrique.png" alt="João Henrique" class="story-img">
-      <div>
-        <p>Olá, eu sou <strong>João Henrique</strong>. Fui diagnosticado com TDAH e dislexia. Poderia ter sido só mais um número nas estatísticas, mas escolhi mudar a minha vida na raça.</p>
-        <p>Saí da portaria noturna, me formei em Gestão de TI e Marketing, e mergulhei no mundo da tecnologia e IA.</p>
-        <p>Hoje, sou um dos poucos que ensinam IA com empatia real. Criei o <strong>Venda Invisível™</strong> para quem trava na venda, mas quer viver disso com verdade.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="final-cta">
-    <h2>Pronto para executar com clareza?</h2>
-    <p>Sem palco. Sem performance. Um dia por vez.</p>
-
-    <div class="cta-row" style="justify-content:center">
-      <a class="btn primary" href="https://pay.kiwify.com.br/gD34AOl">Acessar agora</a>
-      <a class="btn whatsapp" href="https://wa.me/5588996080011" target="_blank">Falar no WhatsApp</a>
-    </div>
-
-    <img src="garantia-30dias.png" alt="Garantia de 30 dias" class="badge">
-  </section>
-
-</main>
-
-<footer>
-  © <span id="year"></span> Venda Invisível™ — SUP3RA DIGITAL
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  // CONTADOR REGRESSIVO (24h padrão)
-  const countdown = document.getElementById("countdown");
-  const target = new Date();
-  target.setDate(target.getDate() + 1);
-  function updateCountdown() {
-    const now = new Date();
-    const diff = target - now;
-    const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, "0");
-    const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, "0");
-    const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, "0");
-    countdown.textContent = `Oferta disponível por: ${hours}:${minutes}:${seconds}`;
-  }
-  setInterval(updateCountdown, 1000);
-</script>
 
 </body>
 </html>
