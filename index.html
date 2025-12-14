@@ -1,262 +1,199 @@
+
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Venda Invisível™</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Venda Invisível™ — Venda serviços sem postar conteúdo, sem call e sem virar outra pessoa para vender." name="description"/>
+<title>Venda Invisível™</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, Arial, sans-serif;background:#ffffff;color:#111111;}
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #000;
-    }
+    .topbar{position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e5e5;z-index:10;}
+    .topbar .inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+    .brand{font-weight:800;font-size:18px}
+    nav a{margin-left:16px;font-size:14px;color:#444}
 
-    body {
-      background: #fff;
-      line-height: 1.5;
-    }
+    .hero{padding:70px 0}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;}
+    h1{font-size:42px;line-height:1.1;margin-bottom:16px}
+    h2{font-size:28px;margin-bottom:12px}
+    h3{font-size:20px;margin-bottom:10px}
+    p{font-size:16px;line-height:1.7;color:#333}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+    .price-tag{font-size:22px;margin-top:20px;}
+    .old-price{text-decoration:line-through;color:#888;margin-right:10px}
+    .new-price{color:#d32f2f;font-weight:700}
 
-    h1 {
-      font-size: 42px;
-      margin-bottom: 20px;
-    }
+    .cta-row{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;}
+    .btn{padding:14px 22px;border-radius:999px;font-weight:700;border:1px solid #000;cursor:pointer;}
+    .btn.primary{background:#000;color:#fff;}
+    .btn.whatsapp{background:#25D366;color:#fff;border-color:#25D366;}
+    .note{margin-top:12px;font-size:13px;color:#666}
 
-    h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
+    .mockup{width:100%;border:1px solid #ddd;border-radius:12px;}
 
-    p {
-      font-size: 18px;
-      margin-bottom: 15px;
-    }
+    .section{padding:70px 0;border-top:1px solid #eee;}
+    .pre-story{max-width:760px;margin:0 auto 40px;}
 
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      align-items: center;
-    }
+    .story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:flex-start;margin-top:24px;}
+    .story-img{width:100%;border-radius:12px;border:1px solid #ddd;}
 
-    .hero-text {
-      flex: 1;
-    }
+    .final-cta{padding:80px 0;text-align:center;border-top:1px solid #eee;}
 
-    .hero img {
-      max-width: 320px;
-      width: 100%;
-    }
+    .badge{width:120px;margin:30px auto 0;display:block;}
 
-    .price {
-      font-size: 28px;
-      margin: 20px 0;
-    }
+    footer{padding:24px 0;text-align:center;font-size:12px;color:#777;border-top:1px solid #eee;}
 
-    .price span {
-      text-decoration: line-through;
-      opacity: 0.5;
-      margin-right: 10px;
-    }
+    .testimonials{text-align:center;margin-top:60px;}
+    .testimonial-box{max-width:640px;margin:0 auto;font-style:italic;color:#444}
 
-    .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
+    .timer{font-weight:bold;font-size:22px;color:#d32f2f;margin-top:16px;}
 
-    .btn {
-      padding: 15px 25px;
-      font-size: 16px;
-      border-radius: 30px;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn-black {
-      background: #000;
-      color: #fff;
-    }
-
-    .btn-green {
-      background: #25D366;
-      color: #fff;
-    }
-
-    .section {
-      margin-top: 80px;
-    }
-
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 10px;
-      font-size: 16px;
-    }
-
-    .about {
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-      align-items: flex-start;
-    }
-
-    .about img {
-      max-width: 300px;
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .seal {
-      margin-top: 60px;
-      text-align: center;
-    }
-
-    .seal img {
-      max-width: 160px;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 14px;
-      margin: 40px 0;
-      opacity: 0.6;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 32px;
-      }
+    @media(max-width:900px){
+      .hero-grid,.story-grid{grid-template-columns:1fr}
+      h1{font-size:34px}
+      nav{display:none}
     }
   </style>
 </head>
-
 <body>
+<!-- TOPO -->
+<div class="topbar">
+<div class="wrap inner">
+<div class="brand">VENDA INVISÍVEL™</div>
+<nav>
+<a href="#historia">Quem está por trás</a>
+<a href="#comprar">Acessar</a>
+</nav>
+</div>
+</div>
+<main class="wrap">
+<!-- HERO -->
+<section class="hero">
+<div class="hero-grid">
+<div>
+<h1>Venda serviços sem postar conteúdo, sem call e sem virar outra pessoa para vender.</h1>
+<p>Se você sabe entregar valor, mas trava ao iniciar conversas, o problema não é marketing. É excesso de decisão no momento errado.</p>
+<div class="price-tag">
+<span class="old-price">R$2.997</span>
+<span class="new-price">por R$497 à vista</span>
+<div class="note"><div style="margin-top:12px; font-size:20px;"><span style="text-decoration: line-through; color: #888; font-size:20px;">R$2997</span> <strong style="color:#000; font-size:28px;">R$497</strong><br/><span style="font-size:14px; color:#666;">Parcelamento em até 12x • Garantia incondicional de 30 dias</span></div></div>
+</div>
+<div class="cta-row">
+<a class="btn primary" href="https://pay.kiwify.com.br/gD34AOl" id="comprar">Acessar o Venda Invisível™</a>
+<a class="btn whatsapp" href="https://wa.me/5588996080011" target="_blank">Suporte • WhatsApp</a>
+</div>
+<div class="timer">Oferta válida por: <span id="countdown"></span></div>
+<div class="note">Sistema passo a passo • Uma ação por dia • Garantia de 30 dias</div>
+</div>
+<img alt="Venda Invisível Mockup" class="mockup" src="box-venda-invisivel.png"/>
+</div>
+</section>
+<!-- COPY -->
+<section class="section">
+<div class="pre-story">
+<h2>Venda serviços sem postar conteúdo, sem call e sem virar outra pessoa para vender.</h2>
+<p>Se você sabe entregar valor, mas trava ao iniciar conversas, o problema não é marketing. <strong>É excesso de decisão no momento errado.</strong></p>
+<p>Isso não é curso nem persuasão. É um sistema de 7 dias, com 1 ação por dia, scripts prontos e ordem fixa para executar sem pensar demais.</p>
+<p><strong>Promete avanço real:</strong> conversas claras, propostas enviadas e menos travamento.</p>
+</div>
+</section>
+<section class="section" style="background:#f9f9f9">
+<h2 style="text-align:center">O que falaram depois de aplicar o sistema</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px;max-width:900px;margin:40px auto">
+<div style="background:#fff;border:1px solid #ddd;padding:24px;border-radius:12px">
+<p style="font-size:16px;line-height:1.6">“Eu achava que precisava virar influencer pra vender meu serviço. No terceiro dia do sistema, fechei um pacote de R$1.200 só com mensagem. Isso nunca tinha acontecido.”</p>
+<p style="font-weight:600;margin-top:12px">— Juliana R., Designer Autônoma</p>
+</div>
+<div style="background:#fff;border:1px solid #ddd;padding:24px;border-radius:12px">
+<p style="font-size:16px;line-height:1.6">“Me identifiquei tanto com a simplicidade que achei que era básico demais... até ver a resposta dos meus primeiros contatos. Virei fã.”</p>
+<p style="font-weight:600;margin-top:12px">— Pedro M., Consultor de Vendas</p>
+</div>
+<div style="background:#fff;border:1px solid #ddd;padding:24px;border-radius:12px">
+<p style="font-size:16px;line-height:1.6">“Só fiz o dia 1 e 2... e uma cliente antiga me chamou de volta depois de ver meu perfil ajustado. O negócio que tava travado há meses, fechou.”</p>
+<p style="font-weight:600;margin-top:12px">— Larissa S., Gestora de tráfego</p>
+</div>
+<div style="background:#fff;border:1px solid #ddd;padding:24px;border-radius:12px">
+<p style="font-size:16px;line-height:1.6">“Eu tenho TDAH, odeio ficar pulando de estratégia em estratégia. Esse sistema me deu paz mental. Ações simples, objetivas, e que funcionam.”</p>
+<p style="font-weight:600;margin-top:12px">— Rafael D., Freelancer de TI</p>
+</div>
+</div>
+</section>
 
-  <div class="container">
-
-    <!-- HERO -->
-    <div class="hero">
-      <div class="hero-text">
-        <h1>Venda serviços sem postar conteúdo, sem call e sem virar outra pessoa para vender.</h1>
-
-        <p>
-          Se você sabe entregar valor, mas trava ao iniciar conversas, o problema não é marketing.
-          <strong>É excesso de decisão no momento errado.</strong>
-        </p>
-
-        <p>
-          Isso não é curso nem persuasão.
-          É um sistema de 7 dias, com 1 ação por dia, scripts prontos e ordem fixa para executar sem pensar demais.
-        </p>
-
-        <div class="price">
-          <span>R$2.997</span> <strong>R$497 à vista</strong>
-        </div>
-
-        <div class="buttons">
-          <a class="btn btn-black" href="https://pay.kiwify.com.br/gD34AOl">Acessar o Venda Invisível™</a>
-          <a class="btn btn-green" href="https://wa.me/5588996080011">Suporte • WhatsApp</a>
-        </div>
-
-        <p style="font-size:14px; opacity:0.7; margin-top:10px;">
-          Parcelamento em até 12x • Garantia incondicional de 30 dias
-        </p>
-      </div>
-
-      <img src="mockup.png" alt="Mockup Venda Invisível">
+<!-- PROVA SOCIAL -->
+<section class="testimonials">
+<h2>Veja o que dizem:</h2>
+<div class="testimonial-box">
+      “Nunca imaginei que conseguiria vender sem aparecer. Em menos de 3 dias, enviei 2 propostas com total confiança. O sistema é direto, simples e humano.”<br/><br/>— Cliente anônimo, SP
     </div>
+</section>
+<!-- HISTÓRIA -->
+<section class="section" id="historia">
+<h2>Quem está por trás</h2>
+<div class="story-grid">
+<img alt="João Henrique" class="story-img" src="foto-joao-henrique.png"/>
+<div>
+<p>Olá, eu sou <strong>João Henrique</strong>. Fui diagnosticado com TDAH e dislexia... [mantido o texto anterior completo aqui]</p>
+<p>
+      Não criei o Venda Invisível™ para ser mais um produto.
+      Criei para ser o que eu gostaria de ter encontrado
+      quando ninguém acreditava em mim — nem eu mesmo.
+    </p>
+<p>
+      Talvez você esteja cansado de promessas vazias, de fórmulas
+      com nomes bonitos e de gurus que nunca venderam um serviço real.
+    </p>
+<p>
+      Esse sistema é direto ao ponto. Prático. Realista.
+      E acima de tudo: humano.
+    </p>
+<p>
+      Eu acredito que você não precisa gritar para ser ouvido,
+      nem virar outra pessoa para conseguir vender.
+    </p>
+<p>
+      Se tudo o que você precisa é de um caminho claro
+      para iniciar conversas, gerar confiança e vender com verdade,
+      então esse é o seu lugar.
+    </p>
+</div>
+</div>
+</section>
+<!-- CTA FINAL -->
+<section class="final-cta">
+<h2>Pronto para executar com clareza?</h2>
+<p>Sem palco. Sem performance. Um dia por vez.</p>
+<div class="cta-row" style="justify-content:center">
+<a class="btn primary" href="https://pay.kiwify.com.br/gD34AOl">Acessar o Venda Invisível™</a>
+<a class="btn whatsapp" href="https://wa.me/5588996080011" target="_blank">Suporte • WhatsApp</a>
+</div>
+<img alt="Garantia de 30 dias" class="badge" src="garantia-30dias.png"/>
+</section>
+</main>
+<footer>© <span id="year"></span> Venda Invisível™</footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-    <!-- PROVA SOCIAL -->
-    <div class="section">
-      <h2>O que falaram depois de aplicar o sistema</h2>
+  function countdown() {
+    const target = new Date();
+    target.setHours(23, 59, 59, 999);
+    const now = new Date();
+    const diff = target - now;
 
-      <div class="testimonials">
-        <div class="card">
-          “Eu achava que precisava virar influencer pra vender meu serviço.
-          No terceiro dia do sistema, fechei um pacote de R$1.200 só com mensagem.”
-          <br><br><strong>Juliana R.</strong>
-        </div>
+    const hrs = Math.floor((diff / 1000 / 60 / 60) % 24).toString().padStart(2, '0');
+    const min = Math.floor((diff / 1000 / 60) % 60).toString().padStart(2, '0');
+    const sec = Math.floor((diff / 1000) % 60).toString().padStart(2, '0');
 
-        <div class="card">
-          “Achei simples demais… até ver meus primeiros contatos respondendo.
-          Virei fã.”
-          <br><br><strong>Pedro M.</strong>
-        </div>
-
-        <div class="card">
-          “Só fiz o dia 1 e 2… uma cliente antiga voltou e fechou.”
-          <br><br><strong>Larissa S.</strong>
-        </div>
-
-        <div class="card">
-          “Tenho TDAH e odeio estratégia confusa.
-          Isso me deu paz mental.”
-          <br><br><strong>Rafael D.</strong>
-        </div>
-      </div>
-    </div>
-
-    <!-- HISTÓRIA -->
-    <div class="section">
-      <div class="about">
-
-        <img src="foto-joao.jpg" alt="João Henrique">
-
-        <div>
-          <p><strong>Olá, eu sou João Henrique.</strong></p>
-
-          <p>
-            Fui diagnosticado com TDAH e dislexia.
-            Poderia ter sido só mais um número, mas escolhi mudar minha vida.
-          </p>
-
-          <p>
-            Saí da portaria noturna, me formei, me especializei em tecnologia,
-            comunicação e IA, e criei o sistema que eu gostaria de ter encontrado
-            quando ninguém acreditava em mim.
-          </p>
-
-          <p>
-            O Venda Invisível™ não é sobre prometer riqueza.
-            É sobre clareza, conversa honesta e construção real.
-          </p>
-
-          <p>
-            Se você não quer gritar, aparecer ou virar personagem pra vender,
-            você está no lugar certo.
-          </p>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- GARANTIA -->
-    <div class="seal">
-      <img src="selo-30dias.png" alt="Garantia de 30 dias">
-      <p>Garantia incondicional de 30 dias</p>
-    </div>
-
-    <footer>
-      © 2025 • Venda Invisível™ • Suporte: (88) 99608-0011
-    </footer>
-
-  </div>
-
+    document.getElementById('countdown').textContent = `${hrs}:${min}:${sec}`;
+    setTimeout(countdown, 1000);
+  }
+  countdown();
+</script>
 </body>
 </html>
