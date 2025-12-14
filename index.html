@@ -1,164 +1,171 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Venda Invisível™ — Como iniciar conversas que viram propostas sem postar conteúdo, sem call e sem performance." />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0f0f10" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Venda Invisível™ — Como iniciar conversas que viram propostas sem postar conteúdo, sem call e sem performance.">
+  <meta name="robots" content="index, follow">
   <title>Venda Invisível™</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --bg:#0f0f10;
-      --text:rgba(255,255,255,.92);
-      --muted:rgba(255,255,255,.70);
-      --muted2:rgba(255,255,255,.55);
-      --card:rgba(255,255,255,.05);
-      --border:rgba(255,255,255,.12);
-      --gold:#E7C76A;
-      --radius:18px;
-      --shadow:0 18px 60px rgba(0,0,0,.55);
-      --max:1100px;
-    }
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:Inter,system-ui,Arial,sans-serif;
-      background:
-        radial-gradient(1200px 600px at 10% 0%, rgba(255,255,255,.08), transparent 60%),
-        radial-gradient(1200px 600px at 90% 10%, rgba(231,199,106,.10), transparent 60%),
-        var(--bg);
-      color:var(--text);
+      font-family:Inter, Arial, sans-serif;
+      background:#ffffff;
+      color:#111111;
     }
     a{color:inherit;text-decoration:none}
-    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 
-    /* TOPBAR */
+    /* TOPO */
     .topbar{
-      position:sticky;top:0;z-index:50;
-      backdrop-filter:blur(10px);
-      background:rgba(15,15,16,.65);
-      border-bottom:1px solid rgba(255,255,255,.08)
+      position:sticky;
+      top:0;
+      background:#ffffff;
+      border-bottom:1px solid #e5e5e5;
+      z-index:10;
     }
     .topbar .inner{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:14px 0
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 0;
     }
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
-    .brand .dot{width:10px;height:10px;border-radius:999px;background:var(--gold)}
-    nav{display:flex;gap:14px}
-    nav a{color:var(--muted);font-size:14px}
-    nav a:hover{color:#fff}
+    .brand{
+      font-weight:800;
+      font-size:18px;
+    }
+    nav a{
+      margin-left:16px;
+      font-size:14px;
+      color:#444;
+    }
 
     /* HERO */
-    .hero{padding:56px 0}
+    .hero{
+      padding:60px 0;
+    }
     .hero-grid{
       display:grid;
       grid-template-columns:1.1fr .9fr;
-      gap:24px;
-      align-items:center
+      gap:32px;
+      align-items:center;
     }
     h1{
-      font-size:clamp(30px,4vw,46px);
-      line-height:1.08;
-      margin:14px 0
+      font-size:42px;
+      line-height:1.1;
+      margin-bottom:16px;
     }
     h2{
-      font-size:clamp(22px,3vw,32px);
-      margin-bottom:10px
+      font-size:28px;
+      margin-bottom:12px;
     }
-    .sub{color:var(--muted);max-width:56ch;line-height:1.6}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+    p{
+      font-size:16px;
+      line-height:1.7;
+      color:#333;
+    }
+    .cta-row{
+      margin-top:24px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
     .btn{
-      padding:14px 20px;
+      padding:14px 22px;
       border-radius:999px;
-      font-weight:800;
-      border:1px solid rgba(255,255,255,.18)
+      font-weight:700;
+      border:1px solid #000;
+      background:#fff;
+      cursor:pointer;
     }
-    .btn.primary{background:#fff;color:#0f0f10}
-    .btn.secondary{background:rgba(255,255,255,.06)}
-    .note{font-size:13px;color:var(--muted2)}
+    .btn.primary{
+      background:#000;
+      color:#fff;
+    }
+    .btn.secondary{
+      background:#fff;
+      color:#000;
+    }
+    .note{
+      margin-top:12px;
+      font-size:13px;
+      color:#666;
+    }
 
     .hero-media{
-      position:relative;
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:18px;
-      box-shadow:var(--shadow)
+      border:1px solid #e5e5e5;
+      padding:16px;
+      border-radius:12px;
     }
     .img{
       width:100%;
-      border-radius:14px;
-      border:1px solid var(--border);
-      margin-bottom:12px
+      margin-bottom:12px;
     }
     .badge{
-      position:absolute;
-      top:14px;
-      right:14px;
-      width:90px
+      width:90px;
+      margin-bottom:12px;
     }
 
-    /* SECTIONS */
-    .section{padding:42px 0}
-    .section p{color:var(--muted);line-height:1.7}
+    /* SEÇÕES */
+    .section{
+      padding:60px 0;
+      border-top:1px solid #eee;
+    }
 
-    /* STORY */
+    /* HISTÓRIA */
     .story-grid{
       display:grid;
       grid-template-columns:.9fr 1.1fr;
-      gap:22px;
+      gap:32px;
       align-items:center;
-      margin-top:20px
+      margin-top:24px;
     }
     .story-img{
       width:100%;
-      border-radius:18px;
-      border:1px solid var(--border);
-      box-shadow:0 20px 60px rgba(0,0,0,.55)
+      border-radius:12px;
+      border:1px solid #ddd;
     }
 
     /* CTA FINAL */
     .final-cta{
-      padding:60px 0;
-      text-align:center
+      padding:80px 0;
+      text-align:center;
+      border-top:1px solid #eee;
     }
     .panel{
-      max-width:820px;
+      max-width:760px;
       margin:0 auto;
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:24px;
-      padding:28px
     }
 
     footer{
-      padding:20px 0;
+      padding:24px 0;
       text-align:center;
       font-size:12px;
-      color:var(--muted2);
-      border-top:1px solid rgba(255,255,255,.08)
+      color:#777;
+      border-top:1px solid #eee;
     }
 
     @media(max-width:900px){
-      .hero-grid,.story-grid{grid-template-columns:1fr}
+      .hero-grid,
+      .story-grid{
+        grid-template-columns:1fr;
+      }
       nav{display:none}
+      h1{font-size:34px}
     }
   </style>
 </head>
 
 <body>
 
-<!-- TOPBAR -->
+<!-- TOPO -->
 <div class="topbar">
   <div class="wrap inner">
-    <div class="brand"><span class="dot"></span>VENDA INVISÍVEL™</div>
+    <div class="brand">VENDA INVISÍVEL™</div>
     <nav>
       <a href="#como">Como funciona</a>
       <a href="#historia">Quem está por trás</a>
@@ -174,9 +181,9 @@
     <div class="hero-grid">
       <div>
         <h1>Como iniciar conversas que viram propostas — sem aparecer.</h1>
-        <p class="sub">
-          Um sistema simples, adulto e executável para quem presta serviço
-          e trava na hora de começar.
+        <p>
+          Um sistema simples e executável para quem presta serviço
+          e trava na hora de começar a vender.
         </p>
 
         <div class="cta-row">
@@ -188,13 +195,15 @@
           </a>
         </div>
 
-        <p class="note">Sistema passo a passo • Uma ação por dia • Garantia de 30 dias</p>
+        <div class="note">
+          Sistema passo a passo • Uma ação por dia • Garantia de 30 dias
+        </div>
       </div>
 
       <div class="hero-media">
-        <img src="assets/garantia-30dias.png" class="badge" alt="Garantia 30 dias">
-        <img src="assets/capa-venda-invisivel.png" class="img" alt="Venda Invisível">
-        <img src="assets/box-venda-invisivel.png" class="img" alt="Mockup Venda Invisível">
+        <img src="garantia-30dias.png" class="badge" alt="Garantia 30 dias">
+        <img src="capa-venda-invisivel.png" class="img" alt="Venda Invisível">
+        <img src="box-venda-invisivel.png" class="img" alt="Mockup Venda Invisível">
       </div>
     </div>
   </section>
@@ -204,7 +213,8 @@
     <h2>Não é marketing. É execução.</h2>
     <p>
       O Venda Invisível™ resolve o travamento antes da venda.
-      Você não estuda. Não adapta. Executa exatamente como está.
+      Você não estuda, não adapta e não improvisa.
+      Apenas executa o que está pronto.
     </p>
   </section>
 
@@ -213,9 +223,7 @@
     <h2>Quem está por trás</h2>
 
     <div class="story-grid">
-      <img src="assets/foto-joao-henrique.png"
-           alt="João Henrique"
-           class="story-img">
+      <img src="foto-joao-henrique.png" alt="João Henrique" class="story-img">
 
       <div>
         <p>
@@ -239,7 +247,7 @@
   <section class="final-cta">
     <div class="panel">
       <h2>Pronto para executar com clareza?</h2>
-      <p class="sub">Sem palco. Sem performance. Um dia por vez.</p>
+      <p>Sem palco. Sem performance. Um dia por vez.</p>
 
       <div class="cta-row" style="justify-content:center">
         <a class="btn primary" href="https://pay.kiwify.com.br/gD34AOl">
@@ -250,7 +258,7 @@
         </a>
       </div>
 
-      <p class="note">Valor: R$497 • Garantia de 30 dias</p>
+      <div class="note">Valor: R$497 • Garantia de 30 dias</div>
     </div>
   </section>
 
