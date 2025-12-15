@@ -1,157 +1,223 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agente Venda Invisível™</title>
-  <meta name="description" content="Agente de apoio para vender serviços sem postar conteúdo, sem call e sem se expor.">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Inter, Arial, sans-serif;
-      background: #fff;
+      font-family: 'Inter', Arial, sans-serif;
+      background: #ffffff;
       color: #111;
       line-height: 1.6;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* TOPO */
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 30px;
       border-bottom: 1px solid #eee;
     }
 
-    header strong {
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .brand {
       font-weight: 800;
       font-size: 18px;
     }
 
-    section {
-      margin-top: 80px;
+    nav a {
+      margin-left: 20px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 70px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
     }
 
     h1 {
       font-size: 42px;
-      line-height: 1.15;
+      line-height: 1.1;
       margin-bottom: 20px;
     }
 
     h2 {
       font-size: 28px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
     }
 
     p {
-      font-size: 18px;
+      font-size: 16px;
       color: #333;
       margin-bottom: 14px;
     }
 
-    ul {
-      margin: 20px 0 20px 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
-      font-size: 18px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 40px;
-      align-items: center;
-      margin-top: 60px;
-    }
-
-    .hero img {
-      width: 100%;
-      max-width: 360px;
-    }
-
     .price {
-      margin-top: 30px;
+      margin-top: 20px;
       font-size: 22px;
-      font-weight: 600;
     }
 
-    .price strong {
-      font-size: 26px;
+    .old {
+      text-decoration: line-through;
+      color: #999;
+      margin-right: 10px;
+    }
+
+    .new {
+      color: #d32f2f;
+      font-weight: 800;
     }
 
     .buttons {
-      margin-top: 25px;
       display: flex;
-      gap: 15px;
+      gap: 14px;
+      margin-top: 24px;
       flex-wrap: wrap;
     }
 
     .btn {
-      padding: 15px 28px;
+      padding: 14px 26px;
       border-radius: 999px;
       font-weight: 700;
-      font-size: 16px;
-      text-decoration: none;
-      display: inline-block;
+      font-size: 15px;
+      border: 1px solid #000;
+      cursor: pointer;
     }
 
-    .btn-primary {
+    .btn.primary {
       background: #000;
       color: #fff;
     }
 
-    .btn-whatsapp {
+    .btn.whatsapp {
       background: #25D366;
       color: #fff;
+      border-color: #25D366;
     }
 
-    .box {
+    .timer {
+      margin-top: 14px;
+      font-weight: 700;
+      color: #d32f2f;
+      font-size: 16px;
+    }
+
+    .mockup {
+      width: 100%;
+      max-width: 340px;
+      border-radius: 14px;
+      border: 1px solid #ddd;
+    }
+
+    /* SEÇÕES */
+    .section {
+      padding: 70px 0;
+      border-top: 1px solid #eee;
+    }
+
+    .center {
       max-width: 760px;
-      margin: auto;
+      margin: 0 auto;
     }
 
+    ul {
+      padding-left: 18px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* DEPOIMENTOS */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 15px;
+    }
+
+    /* HISTÓRIA */
     .about {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
       gap: 40px;
-      align-items: center;
+      align-items: flex-start;
     }
 
     .about img {
       width: 100%;
       max-width: 280px;
+      border-radius: 14px;
+      border: 1px solid #ddd;
     }
 
-    .center {
+    /* GARANTIA */
+    .seal {
       text-align: center;
+      margin-top: 40px;
     }
 
-    .final {
-      background: #fafafa;
-      padding: 80px 20px;
-      margin-top: 80px;
-      text-align: center;
+    .seal img {
+      max-width: 140px;
     }
 
     footer {
-      margin-top: 60px;
       text-align: center;
-      font-size: 14px;
+      font-size: 13px;
       color: #777;
+      padding: 30px 0;
+      border-top: 1px solid #eee;
     }
 
+    /* MOBILE */
     @media (max-width: 900px) {
-      .hero, .about {
+      .hero-grid,
+      .about {
         grid-template-columns: 1fr;
         text-align: center;
       }
@@ -159,198 +225,132 @@
       h1 {
         font-size: 34px;
       }
+
+      .mockup,
+      .about img {
+        margin: 0 auto;
+        max-width: 240px;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .btn {
+        min-width: 240px;
+        text-align: center;
+      }
+
+      nav {
+        display: none;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+  <div class="wrap topbar">
+    <div class="brand">AGENTE VENDA INVISÍVEL™</div>
+    <nav>
+      <a href="#como">Como funciona</a>
+      <a href="#quem">Para quem</a>
+      <a href="#acesso">Acessar</a>
+    </nav>
+  </div>
+</header>
 
-  <header>
-    <strong>AGENTE VENDA INVISÍVEL™</strong>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
+<section class="hero">
+  <div class="wrap hero-grid">
     <div>
-      <h1>
-        Um agente de apoio para vender serviços<br>
-        sem postar conteúdo, sem call e sem se expor.
-      </h1>
+      <h1>Um agente de apoio para vender serviços sem postar conteúdo, sem call e sem se expor.</h1>
 
-      <p>Se você presta serviços e trava na hora de:</p>
-
-      <ul>
-        <li>iniciar conversas</li>
-        <li>responder interesse</li>
-        <li>conduzir sem parecer vendedor</li>
-      </ul>
-
-      <p>
-        o problema não é falta de técnica.<br>
-        <strong>É excesso de decisão sozinho.</strong>
-      </p>
-
-      <p>
-        O Agente Venda Invisível™ existe para isso.
-      </p>
+      <p>Se você presta serviços e trava ao iniciar conversas, responder interesse ou conduzir sem parecer vendedor, o problema não é falta de técnica.</p>
+      <p><strong>É excesso de decisão sozinho.</strong></p>
 
       <div class="price">
-        Investimento<br>
-        <strong>R$ 997 à vista</strong>
+        <span class="old">R$1.497</span>
+        <span class="new">R$ 997 à vista</span>
       </div>
 
       <div class="buttons">
-        <a href="#" class="btn btn-primary">Acessar o Agente Venda Invisível™</a>
-        <a href="https://wa.me/5588996080011" class="btn btn-whatsapp">Suporte • WhatsApp</a>
+        <a class="btn primary" href="https://pay.kiwify.com.br/gD34AOl">Acessar o Agente</a>
+        <a class="btn whatsapp" href="https://wa.me/5588996080011">Suporte WhatsApp</a>
       </div>
+
+      <div class="timer">⏳ Oferta expira em 05:59:59</div>
     </div>
 
-    <img src="box-venda-invisivel.png" alt="Agente Venda Invisível">
-  </section>
+    <img class="mockup" src="box-venda-invisivel.png" alt="Agente Venda Invisível">
+  </div>
+</section>
 
-  <!-- O QUE É -->
-  <section class="box">
+<section class="section" id="como">
+  <div class="wrap center">
     <h2>O que é o Agente Venda Invisível™</h2>
-
-    <p>
-      O Agente Venda Invisível™ é um agente de apoio estratégico,
-      criado para te acompanhar durante a conversa, não antes.
-    </p>
-
-    <p>Ele te ajuda a:</p>
+    <p>É um agente de apoio estratégico criado para te acompanhar durante a conversa, não antes.</p>
 
     <ul>
-      <li>observar melhor</li>
-      <li>responder com clareza</li>
-      <li>reduzir ruído emocional</li>
-      <li>evitar explicação demais</li>
-      <li>não forçar decisões</li>
+      <li>Organizar respostas</li>
+      <li>Reduzir excesso de palavras</li>
+      <li>Manter tom humano e direto</li>
+      <li>Evitar ruído emocional</li>
     </ul>
 
-    <p>
-      Sem script robótico.<br>
-      Sem persuasão.<br>
-      Sem performance.
-    </p>
-  </section>
+    <p><strong>Ele não vende por você. Ele impede você de atrapalhar a venda.</strong></p>
+  </div>
+</section>
 
-  <!-- COMO USAR -->
-  <section class="box">
-    <h2>Como o agente é usado na prática</h2>
-
-    <p>Sempre que você:</p>
-
+<section class="section" id="quem">
+  <div class="wrap center">
+    <h2>Para quem funciona melhor</h2>
     <ul>
-      <li>analisar um perfil</li>
-      <li>for iniciar uma conversa</li>
-      <li>receber um “vou pensar”</li>
-      <li>precisar escrever uma proposta</li>
-      <li>travar sem saber o próximo passo</li>
+      <li>Prestadores de serviço</li>
+      <li>Consultores, freelancers, B2B</li>
+      <li>Pessoas que odeiam se vender</li>
+      <li>Quem já entrega valor real</li>
     </ul>
+  </div>
+</section>
 
-    <p>Você usa o agente para:</p>
+<section class="section">
+  <div class="wrap testimonials">
+    <div class="card">“Menos ansiedade ao responder. Conversas mais naturais.”</div>
+    <div class="card">“Passei a encerrar conversas com clareza.”</div>
+    <div class="card">“Não vendo mais forçando.”</div>
+  </div>
+</section>
 
-    <ul>
-      <li>organizar a resposta</li>
-      <li>reduzir excesso de palavras</li>
-      <li>manter o tom humano e direto</li>
-    </ul>
-
-    <p>
-      📌 Ele não vende por você.<br>
-      📌 Ele te impede de atrapalhar a venda.
-    </p>
-  </section>
-
-  <!-- MANUAIS -->
-  <section class="box">
-    <h2>E os manuais?</h2>
-
-    <p>Os manuais não são o produto.<br> Eles são a base para o agente funcionar bem.</p>
-
-    <p><strong>Você recebe:</strong></p>
-
-    <p><strong>🧠 Manual Operacional</strong><br>
-    Para saber quando usar, quando não usar e como não se perder.</p>
-
-    <p><strong>⚙️ Sistema Invisível — 7 Dias</strong><br>
-    Para criar movimento real e gerar conversas onde o agente atua.</p>
-
-    <p><strong>🧰 Kit de Execução</strong><br>
-    Scripts, mensagens e estruturas para não começar do zero.</p>
-
-    <p>
-      👉 O agente pensa com você.<br>
-      👉 Os manuais garantem execução.
-    </p>
-  </section>
-
-  <!-- PARA QUEM -->
-  <section class="box">
-    <h2>Para quem este agente funciona melhor</h2>
-
-    <p>
-      ✔️ Prestadores de serviço<br>
-      ✔️ Consultores, freelancers, B2B<br>
-      ✔️ Pessoas que odeiam se vender<br>
-      ✔️ Quem já entrega valor real
-    </p>
-
-    <p>
-      ❌ Não é para curiosos<br>
-      ❌ Não é para iniciantes absolutos<br>
-      ❌ Não é para quem vive de palco
-    </p>
-  </section>
-
-  <!-- HISTÓRIA -->
-  <section class="about">
+<section class="section">
+  <div class="wrap about">
     <img src="foto-joao-henrique.png" alt="João Henrique">
 
     <div>
-      <h2>Olá, eu sou João Henrique.</h2>
+      <h3>Olá, eu sou João Henrique.</h3>
 
-      <p>
-        Fui diagnosticado com TDAH e dislexia. Poderia ter parado aí.
-        Mas escolhi criar um caminho simples, honesto e executável.
-      </p>
+      <p>Fui diagnosticado com TDAH e dislexia. Poderia ter parado aí. Escolhi criar um caminho simples, honesto e executável.</p>
 
-      <p>
-        O Agente Venda Invisível™ não nasceu para prometer riqueza,
-        mas para destravar conversas e devolver clareza
-        a quem sabe entregar valor.
-      </p>
+      <p>O Agente Venda Invisível™ nasceu para destravar conversas e devolver clareza a quem sabe entregar valor.</p>
 
-      <p>
-        Se você não quer palco, personagem ou performance,
-        este sistema foi feito para você.
-      </p>
+      <p>Se você não quer palco, personagem ou performance, este sistema foi feito para você.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-</div>
+<section class="section" id="acesso">
+  <div class="wrap seal">
+    <img src="garantia-30dias.png" alt="Garantia 30 dias">
+    <p>Garantia incondicional de 30 dias</p>
 
-<!-- FINAL CTA -->
-<div class="final">
-  <h2>Clareza durante a conversa muda tudo.</h2>
-
-  <p>
-    Se você busca palco, hype ou truque,<br>
-    este não é o produto certo.
-  </p>
-
-  <p>
-    Se você busca clareza durante a conversa,<br>
-    é exatamente para isso que ele foi criado.
-  </p>
-
-  <a href="#" class="btn btn-primary">Acessar o Agente Venda Invisível™</a>
-</</div>
+    <div class="buttons" style="justify-content:center;margin-top:20px">
+      <a class="btn primary" href="https://pay.kiwify.com.br/gD34AOl">Acessar o Agente Venda Invisível™</a>
+    </div>
+  </div>
+</section>
 
 <footer>
-  © 2025 • Agente Venda Invisível™
+  © 2025 • Agente Venda Invisível™ • Suporte: (88) 99608-0011
 </footer>
 
 </body>
