@@ -1,141 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Venda Invisível™</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Venda Invisível™ — Sistema para vender serviços sem improviso</title>
+<meta name="description" content="Venda Invisível™ é um sistema prático para vender serviços sem postar conteúdo, sem call e sem performance. Clareza, estrutura e conversas reais." />
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0;}
-
 :root{
   --bg:#F6F5F3;
-  --paper:#ffffff;
+  --paper:#FFFFFF;
   --text:#1E1E1E;
-  --muted:#666;
+  --muted:#6A6A6A;
   --accent:#2E5E4E;
-  --shadow:0 10px 26px rgba(0,0,0,.06);
+  --shadow:0 14px 40px rgba(0,0,0,.06);
   --radius:18px;
 }
 
+*{box-sizing:border-box;margin:0;padding:0}
+
 body{
-  font-family:'Inter',sans-serif;
+  font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
   background:var(--bg);
   color:var(--text);
-  line-height:1.7;
+  line-height:1.65;
 }
 
-.wrap{
-  max-width:880px;
-  margin:0 auto;
-  padding:0 20px;
-}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 
 header{
   padding:28px 0;
   text-align:center;
-  font-weight:700;
   font-size:14px;
-  letter-spacing:.04em;
+  font-weight:700;
+  letter-spacing:.08em;
 }
 
-section{padding:90px 0}
+section{padding:96px 0}
 
-h1{
-  font-size:42px;
-  line-height:1.15;
-  margin-bottom:26px;
+h1{font-size:46px;line-height:1.1;margin-bottom:24px}
+
+h2{font-size:30px;margin-bottom:20px}
+
+h3{
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:10px
 }
 
-h2{
-  font-size:28px;
-  margin:50px 0 20px;
-}
+p{font-size:18px;margin-bottom:14px}
 
-p{
-  font-size:18px;
-  margin-bottom:16px;
-}
+.muted{font-size:15px;color:var(--muted)}
 
-strong{font-weight:600}
+.hero{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:48px;
+  align-items:start
+}
 
 .card{
   background:var(--paper);
   border-radius:var(--radius);
-  padding:34px;
+  padding:38px;
   box-shadow:var(--shadow);
-  margin:40px 0;
+  margin-top:28px
 }
 
 .micro{
-  background:#F2F1EE;
+  margin-top:26px;
+  padding:20px 24px;
   border-radius:14px;
-  padding:20px 22px;
-  margin:28px 0;
+  background:rgba(255,255,255,.8);
+  box-shadow:0 10px 28px rgba(0,0,0,.04)
 }
 
-ul{
-  padding-left:18px;
-  margin:20px 0;
+.figure{
+  background:var(--paper);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow)
 }
 
-li{
-  margin-bottom:10px;
-  font-size:17px;
-}
+.figure img{width:100%;border-radius:12px}
+
+.caption{font-size:13px;color:#777;margin-top:10px}
 
 .btn{
   display:inline-block;
-  margin-top:30px;
-  padding:14px 34px;
+  margin-top:28px;
+  padding:16px 34px;
+  border-radius:999px;
   background:var(--accent);
   color:#fff;
-  border-radius:999px;
-  font-size:16px;
   font-weight:600;
-  text-decoration:none;
+  font-size:16px;
+  text-decoration:none
 }
 
 .btn-support{
-  display:inline-block;
-  margin-top:14px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:16px;
   padding:10px 22px;
   border-radius:999px;
-  border:1.5px dashed #aaa;
-  background:rgba(0,0,0,.03);
-  color:#333;
+  border:1px solid #ccc;
+  background:transparent;
+  color:#444;
   font-size:14px;
-  text-decoration:none;
+  font-weight:500;
+  text-decoration:none
 }
 
-.btn-support:hover{
-  background:rgba(0,0,0,.06);
+.btn-support:hover{border-color:#999;color:#222}
+
+ul{padding-left:18px;margin-top:14px}
+li{margin-bottom:8px;font-size:17px}
+
+.steps div{margin-bottom:10px;font-size:17px}
+
+.quotes{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+  margin-top:34px
 }
 
-.muted{
-  color:var(--muted);
-  font-size:15px;
-  margin-top:10px;
+.quote{
+  background:var(--paper);
+  border-radius:14px;
+  padding:24px;
+  box-shadow:var(--shadow);
+  font-size:16px
 }
 
 footer{
-  padding:80px 20px 40px;
+  padding:90px 20px 46px;
   text-align:center;
   font-size:14px;
-  color:#777;
+  color:#777
 }
 
-.sup3ra{
-  margin-top:24px;
-  font-size:13px;
-  color:#666;
-}
+.sup3ra{margin-top:26px;font-size:13px;color:#666}
 
-@media(max-width:768px){
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
   h1{font-size:34px}
-  section{padding:64px 0}
+  section{padding:70px 0}
 }
 </style>
 </head>
@@ -145,69 +163,37 @@ footer{
 <header>VENDA INVISÍVEL™</header>
 
 <section>
-<div class="wrap">
+<div class="wrap hero">
+<div>
+<h1>Venda serviços sem postar conteúdo, sem call e sem improviso.</h1>
 
-<h1>Um sistema para vender serviços sem postar conteúdo,<br>sem call e sem performance.</h1>
-
-<p>Se você já sabe entregar valor, mas trava ao:</p>
-
-<ul>
-  <li>iniciar conversas</li>
-  <li>responder interesse</li>
-  <li>conduzir decisões com clareza</li>
-</ul>
-
-<p>o problema não é técnica.</p>
+<p>
+Se você já sabe entregar valor, mas trava ao iniciar conversas, responder interesse ou conduzir decisões,
+o problema não é técnica.
+</p>
 
 <p><strong>É excesso de decisão sem estrutura.</strong></p>
 
-<p>Você não precisa aprender marketing.<br>
-Precisa parar de improvisar.</p>
-
 <div class="card">
-<p>Primeiro vem o entendimento. Depois o nome.</p>
-
-<p>Quando você reduz improviso:</p>
-
-<ul>
-  <li>as conversas ficam mais simples</li>
-  <li>a resposta vem com menos ansiedade</li>
-  <li>a decisão deixa de ser um peso</li>
-</ul>
-
-<p>Esse sistema existe para isso.</p>
-
-<p><strong>Ele se chama Venda Invisível™.</strong></p>
-
-<p>Não foi feito para ser estudado.<br>
-Foi feito para ser usado.</p>
+<p>Quando a estrutura entra, a ansiedade sai.</p>
+<p>
+<strong>Venda Invisível™</strong> é um sistema feito para uso real.
+Não foi criado para ser estudado.
+Foi criado para ser seguido.
+</p>
 </div>
 
-<h2>O que acontece depois da compra</h2>
-
-<p>Você recebe acesso imediato aos materiais do sistema.</p>
-
-<p>Durante 7 dias, você executa:</p>
-
-<ul>
-  <li>uma ação por dia</li>
-  <li>em mensagens reais</li>
-  <li>com pessoas reais</li>
-</ul>
-
-<p>Sem palco.<br>
-Sem exposição.<br>
-Sem “técnica de persuasão”.</p>
-
-<p>Ao final, você decide com calma<br>
-se esse é o seu jeito de vender.</p>
-
-<p>Sem pressão.<br>
-Sem urgência.<br>
-Decisão adulta.</p>
+<div class="micro">
+<h3>O que acontece depois da compra</h3>
+<p>
+Você recebe acesso imediato aos PDFs.
+Por 7 dias, executa uma ação por dia em conversas reais.
+Ao final, decide com clareza se esse é o seu jeito de vender.
+</p>
+</div>
 
 <a class="btn" href="https://pay.kiwify.com.br/gD34AOl">Acessar o Venda Invisível™</a><br>
-<a class="btn-support" href="https://wa.me/5588996080014" target="_blank">Falar com suporte</a>
+<a class="btn-support" href="https://wa.me/5588996080011" target="_blank">Falar com suporte</a>
 
 <p class="muted">Sem pressão. Sem urgência. Decisão adulta.</p>
 </div>
@@ -219,82 +205,90 @@ Decisão adulta.</p>
 </div>
 </section>
 
-<!-- O QUE RECEBE -->
 <section>
 <div class="wrap">
 <h2>O que você recebe</h2>
 <div class="card">
 <ul>
-<li><strong>Sistema Invisível — 7 Dias</strong><br>
-→ Uma ação clara por dia<br>
-→ Tempo médio: 30 minutos<br>
-→ Critério simples de “feito / não feito”</li>
-
-<li><strong>Kit de Execução</strong><br>
-→ Mensagens prontas para iniciar conversas<br>
-→ Modelos de diagnóstico<br>
-→ Mini-proposta sem call<br>
-→ Follow-ups simples e respeitosos</li>
-
-<li><strong>Manifesto Invisível (opcional)</strong><br>
-→ Leitura curta para reduzir ruído mental<br>
-→ Usado apenas se você travar</li>
-
-<li><strong>Agente de apoio (opcional)</strong><br>
-→ Usado somente para destravar<br>
-→ Nunca para improvisar ou complicar</li>
+<li><strong>Sistema Invisível — 7 Dias:</strong> uma ação clara por dia.</li>
+<li><strong>Kit de Execução:</strong> mensagens prontas para conversas reais.</li>
+<li><strong>Manifesto Invisível:</strong> leitura opcional para reduzir ruído.</li>
+<li><strong>Agente de apoio:</strong> usado apenas se necessário.</li>
 </ul>
 </div>
 </div>
 </section>
 
-<!-- ORDEM -->
 <section>
 <div class="wrap">
 <h2>A ordem é importante</h2>
 <div class="card steps">
-<div>1️⃣ Comece pelo Sistema de 7 Dias</div>
-<div>2️⃣ Use o Kit enquanto conversa</div>
-<div>3️⃣ Leia o Manifesto apenas se travar</div>
-<div>4️⃣ Use o Agente só se necessário</div>
-<p class="muted">Clareza vem da sequência.</p>
+<div>1. Execute o sistema de 7 dias</div>
+<div>2. Use o kit durante as conversas</div>
+<div>3. Leia o manifesto apenas se travar</div>
+<div>4. Use o agente só se necessário</div>
+<p class="muted">Seguir a ordem evita improviso.</p>
 </div>
 </div>
 </section>
 
-<!-- GARANTIA -->
+<section>
+<div class="wrap">
+<h2>Para quem faz sentido</h2>
+<div class="card">
+<ul>
+<li>Prestadores de serviço com oferta definida</li>
+<li>Pessoas que já conversam com clientes por mensagem</li>
+<li>Quem prefere clareza a persuasão</li>
+<li>Quem quer reduzir improviso, não aprender marketing</li>
+</ul>
+
+<h3 style="margin-top:28px">Para quem não faz</h3>
+<ul>
+<li>Quem busca promessa de faturamento</li>
+<li>Iniciantes sem serviço claro</li>
+<li>Quem espera automação que venda sozinha</li>
+<li>Quem não executa por 7 dias</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>O que as pessoas relatam</h2>
+<div class="quotes">
+<div class="quote">“As conversas ficaram mais simples.”</div>
+<div class="quote">“Respondo sem ansiedade.”</div>
+<div class="quote">“Parei de improvisar.”</div>
+</div>
+<p class="muted">Relatos indicam uso, não promessa.</p>
+</div>
+</section>
+
 <section>
 <div class="wrap">
 <h2>Garantia honesta</h2>
 <div class="card">
-<p>O Venda Invisível™ não foi feito para ser acreditado.<br>
-Foi feito para ser usado.</p>
-
-<p>Você tem <strong>30 dias</strong> para executar o sistema e decidir com clareza.</p>
+<p>O Venda Invisível™ foi feito para ser usado, não acreditado.</p>
+<p>Você tem <strong>30 dias</strong> para executar e decidir com clareza.</p>
 
 <div class="micro">
-<h3>Critério simples:</h3>
-<p>Se você executou e ainda assim não serviu,<br>
-o reembolso é direto e sem justificativa.</p>
-
-<p>Sem constrangimento.<br>
-Sem retenção forçada.</p>
+<h3>Critério simples</h3>
+<p>Se você executou e não serviu, o reembolso é direto e sem justificativa.</p>
 </div>
 
-<p><strong>A compra inicia o uso.</strong></p>
-
 <a class="btn" href="https://pay.kiwify.com.br/gD34AOl">Acessar o Venda Invisível™</a><br>
-<a class="btn-support" href="https://wa.me/5588996080014" target="_blank">Falar com suporte</a>
+<a class="btn-support" href="https://wa.me/5588996080011" target="_blank">Falar com suporte</a>
+
+<p class="muted">A compra inicia o uso.</p>
 </div>
 </div>
 </section>
 
 <footer>
-© 2025 • Venda Invisível™<br>
-Suporte: <strong>(88) 99608-0014</strong><br>
-E-mail: <a href="mailto:agsup3radigital@gmail.com">agsup3radigital@gmail.com</a><br>
-Projeto desenvolvido pela <strong>SUP3RA DIGITAL</strong><br>
-produtos digitais práticos, éticos e sem enganação.
+© 2025 • Venda Invisível™ • Suporte: (88) 99608-0011
+<div class="sup3ra">Projeto desenvolvido pela <strong>SUP3RA DIGITAL</strong> — produtos digitais práticos, éticos e sem enganação.</div>
 </footer>
 
 </body>
