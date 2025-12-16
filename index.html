@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *{box-sizing:border-box;margin:0;padding:0;}
 
     :root{
       --bg:#F6F5F3;
@@ -16,9 +16,8 @@
       --text:#1E1E1E;
       --muted:#666;
       --accent:#2E5E4E;
-      --shadow: 0 10px 30px rgba(0,0,0,.05);
-      --shadow2: 0 8px 22px rgba(0,0,0,.04);
-      --radius: 18px;
+      --shadow:0 12px 32px rgba(0,0,0,.05);
+      --radius:18px;
     }
 
     body{
@@ -27,8 +26,6 @@
       color:var(--text);
       line-height:1.7;
     }
-
-    a{ color:inherit; text-decoration:none; }
 
     .wrap{
       max-width:980px;
@@ -40,12 +37,11 @@
       padding:28px 0;
       text-align:center;
       font-weight:700;
-      letter-spacing:.05em;
+      letter-spacing:.04em;
       font-size:14px;
-      color:#222;
     }
 
-    section{ padding:90px 0; }
+    section{padding:90px 0;}
 
     h1{
       font-size:44px;
@@ -58,6 +54,14 @@
       font-size:28px;
       margin-bottom:18px;
       letter-spacing:-.01em;
+    }
+
+    h3{
+      font-size:16px;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      margin-bottom:10px;
+      color:#333;
     }
 
     p{
@@ -97,7 +101,6 @@
     .figure img{
       width:100%;
       height:auto;
-      display:block;
       border-radius:12px;
     }
 
@@ -105,7 +108,6 @@
       font-size:13px;
       color:#777;
       margin-top:10px;
-      line-height:1.4;
     }
 
     .btn{
@@ -120,36 +122,23 @@
     }
 
     .micro{
-      margin-top:18px;
-      padding:18px 20px;
+      margin-top:22px;
+      padding:18px 22px;
       border-radius:14px;
-      background:rgba(255,255,255,.65);
-      box-shadow:var(--shadow2);
+      background:rgba(255,255,255,.7);
+      box-shadow:0 8px 22px rgba(0,0,0,.04);
     }
 
-    .micro h3{
-      font-size:14px;
-      letter-spacing:.03em;
-      text-transform:uppercase;
-      color:#333;
-      margin-bottom:10px;
+    ul{padding-left:18px;margin-top:14px;}
+    li{margin-bottom:8px;font-size:17px;}
+
+    .steps{
+      margin-top:20px;
     }
 
-    .micro p{
-      font-size:16px;
-      margin-bottom:0;
-      color:#333;
-    }
-
-    ul{
-      padding-left:18px;
-      margin-top:14px;
-    }
-
-    li{
-      margin-bottom:8px;
+    .step{
+      margin-bottom:14px;
       font-size:17px;
-      color:#2A2A2A;
     }
 
     .quotes{
@@ -163,9 +152,8 @@
       background:var(--paper);
       border-radius:14px;
       padding:22px;
-      box-shadow:var(--shadow2);
+      box-shadow:0 8px 22px rgba(0,0,0,.04);
       font-size:16px;
-      color:#2A2A2A;
     }
 
     footer{
@@ -176,25 +164,15 @@
     }
 
     .sup3ra{
-      margin-top:22px;
+      margin-top:24px;
       font-size:13px;
       color:#666;
-      line-height:1.5;
-    }
-
-    /* opcional: logo pequena no rodapé */
-    .sup3ra img{
-      max-width:120px;
-      height:auto;
-      display:block;
-      margin:0 auto 10px;
-      opacity:.95;
     }
 
     @media(max-width:900px){
-      .hero{ grid-template-columns:1fr; }
-      h1{ font-size:34px; }
-      section{ padding:64px 0; }
+      .hero{grid-template-columns:1fr;}
+      h1{font-size:34px;}
+      section{padding:64px 0;}
     }
   </style>
 </head>
@@ -226,12 +204,11 @@
         </p>
       </div>
 
-      <!-- AMARRAÇÃO FINAL (ANTES DO CLIQUE) -->
       <div class="micro">
         <h3>O que acontece depois da compra</h3>
         <p>
           Você recebe acesso imediato aos PDFs do sistema.
-          Leia, execute por 7 dias e decida com calma.
+          Executa por 7 dias e decide com calma.
         </p>
       </div>
 
@@ -241,24 +218,44 @@
 
     <div class="figure">
       <img src="box-venda-invisivel.png" alt="Venda Invisível™">
-      <div class="caption">Estrutura simples em PDFs curtos e diretos. Não é curso para maratonar.</div>
+      <div class="caption">
+        Sistema entregue em PDFs curtos e copiáveis. Não é curso para maratonar.
+      </div>
     </div>
   </div>
 </section>
 
-<!-- O QUE VOCÊ RECEBE -->
+<!-- O QUE VOCE RECEBE -->
 <section>
   <div class="wrap">
     <h2>O que você recebe</h2>
 
     <div class="card">
       <ul>
-        <li><strong>⚙️ Sistema Invisível — 7 Dias:</strong> uma ação por dia, com checklist e critério de “feito”.</li>
-        <li><strong>🧰 Kit de Execução:</strong> scripts e modelos para usar durante a conversa, sem inventar.</li>
-        <li><strong>📘 Manifesto Invisível:</strong> leitura opcional para reduzir ruído quando a simplicidade incomodar.</li>
-        <li><strong>🤖 Agente de apoio (opcional):</strong> entra só quando você já está conversando e começa a se atrapalhar.</li>
+        <li><strong>Sistema Invisível — 7 Dias:</strong> uma ação por dia, com critério de “feito”.</li>
+        <li><strong>Kit de Execução:</strong> mensagens prontas para usar durante conversas reais.</li>
+        <li><strong>Manifesto Invisível:</strong> leitura opcional para reduzir ruído mental.</li>
+        <li><strong>Agente de apoio:</strong> opcional, usado apenas para não atrapalhar.</li>
       </ul>
       <p class="muted">O produto principal são os PDFs. O resto existe para apoiar o uso.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ORDEM -->
+<section>
+  <div class="wrap">
+    <h2>A ordem é importante</h2>
+
+    <div class="card steps">
+      <div class="step">1. Comece pelo <strong>Sistema de 7 dias</strong>.</div>
+      <div class="step">2. Use o <strong>Kit</strong> enquanto executa as conversas.</div>
+      <div class="step">3. Consulte o <strong>Manifesto</strong> apenas se travar.</div>
+      <div class="step">4. Use o <strong>Agente</strong> só se começar a se atrapalhar.</div>
+
+      <p class="muted">
+        Se você seguir a ordem, não precisa improvisar.
+      </p>
     </div>
   </div>
 </section>
@@ -270,11 +267,13 @@
 
     <div class="quotes">
       <div class="quote">“Hoje respondo sem aquele peso de estar incomodando.”</div>
-      <div class="quote">“As conversas ficaram mais simples e menos cansativas.”</div>
-      <div class="quote">“Não virei vendedor. Eu só parei de travar.”</div>
+      <div class="quote">“As conversas ficaram mais simples e objetivas.”</div>
+      <div class="quote">“Não virei vendedor. Só parei de travar.”</div>
     </div>
 
-    <p class="muted">Relato bom aqui não prova sucesso. Prova uso real.</p>
+    <p class="muted">
+      Relato aqui não prova sucesso. Prova uso real.
+    </p>
   </div>
 </section>
 
@@ -286,14 +285,15 @@
     <div class="card">
       <p>
         <strong>Garantia de uso, não de promessa.</strong><br>
-        Você tem 30 dias para ler, executar e avaliar com clareza.
+        Você tem 30 dias para ler, executar e decidir com clareza.
         Se não fizer sentido, o reembolso é simples.
       </p>
 
-      <div class="micro" style="margin-top:18px">
+      <div class="micro">
         <h3>Critério honesto</h3>
         <p>
-          Se você executou e ainda assim não serviu para o seu contexto, você não precisa justificar nada.
+          Se você executou e ainda assim não serviu para o seu contexto,
+          você não precisa justificar nada.
         </p>
       </div>
 
@@ -305,16 +305,10 @@
 
 <footer>
   © 2025 • Venda Invisível™ • Suporte: (88) 99608-0011
-
   <div class="sup3ra">
-    <!-- opcional: descomente se quiser usar logo pequena -->
-    <!-- <img src="logo-sup3ra-digital.png" alt="SUP3RA DIGITAL"> -->
-
-    Projeto desenvolvido pela <strong>SUP3RA DIGITAL</strong> — projetos digitais práticos, éticos e sem enganação.<br>
-    Clareza antes da venda. Uso real antes da promessa.
+    Projeto desenvolvido pela <strong>SUP3RA DIGITAL</strong> — projetos digitais práticos, éticos e sem enganação.
   </div>
 </footer>
 
 </body>
 </html>
-```
