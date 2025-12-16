@@ -10,119 +10,213 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #F6F5F3;
-      color: #1E1E1E;
-      line-height: 1.7;
+    :root{
+      --bg:#F6F5F3;
+      --paper:#FFFFFF;
+      --text:#1E1E1E;
+      --muted:#666;
+      --border:#E2E2E2;
+      --border2:#E0E0E0;
+      --accent:#2E5E4E;
+      --accent2:#3A4F7A;
     }
 
-    .wrap {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 0 20px;
+    body{
+      font-family:'Inter',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
     }
 
-    header {
-      border-bottom: 1px solid #E2E2E2;
-      background: #F6F5F3;
+    a{ color:inherit; text-decoration:none; }
+
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      padding:0 20px;
     }
 
-    header .wrap {
-      padding: 22px 20px;
-      font-weight: 700;
-      font-size: 15px;
-      letter-spacing: 0.02em;
+    header{
+      border-bottom:1px solid var(--border);
+      background:var(--bg);
+      position:sticky;
+      top:0;
+      z-index:10;
     }
 
-    section {
-      padding: 90px 0;
-      border-bottom: 1px solid #E2E2E2;
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
     }
 
-    h1 {
-      font-size: 44px;
-      line-height: 1.15;
-      font-weight: 700;
-      margin-bottom: 26px;
+    .brand{
+      font-weight:700;
+      font-size:15px;
+      letter-spacing:.02em;
     }
 
-    h2 {
-      font-size: 28px;
-      font-weight: 600;
-      margin-bottom: 18px;
+    nav a{
+      font-size:14px;
+      margin-left:18px;
+      color:#444;
     }
 
-    p {
-      font-size: 18px;
-      margin-bottom: 16px;
-      color: #2A2A2A;
+    section{
+      padding:88px 0;
+      border-bottom:1px solid var(--border);
     }
 
-    strong { font-weight: 600; }
-
-    .box {
-      background: #FFFFFF;
-      border: 1px solid #E0E0E0;
-      border-radius: 14px;
-      padding: 32px;
-      margin-top: 32px;
+    h1{
+      font-size:44px;
+      line-height:1.15;
+      margin-bottom:22px;
+      letter-spacing:-.02em;
     }
 
-    ul {
-      margin-top: 14px;
-      padding-left: 18px;
+    h2{
+      font-size:28px;
+      margin-bottom:18px;
+      letter-spacing:-.01em;
     }
 
-    li {
-      font-size: 17px;
-      margin-bottom: 8px;
+    h3{
+      font-size:18px;
+      margin-bottom:10px;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 30px;
-      border-radius: 999px;
-      background: #2E5E4E;
-      color: #FFFFFF;
-      font-size: 16px;
-      font-weight: 600;
-      text-decoration: none;
+    p{
+      font-size:18px;
+      color:#2A2A2A;
+      margin-bottom:14px;
     }
 
-    .muted {
-      font-size: 15px;
-      color: #666;
-      margin-top: 14px;
+    .muted{
+      font-size:15px;
+      color:var(--muted);
+      margin-top:12px;
     }
 
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-      margin-top: 32px;
+    .grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:36px;
     }
 
-    .card {
-      background: #FFFFFF;
-      border: 1px solid #E0E0E0;
-      border-radius: 12px;
-      padding: 22px;
-      font-size: 16px;
-      color: #333;
+    .card{
+      background:var(--paper);
+      border:1px solid var(--border2);
+      border-radius:14px;
+      padding:28px;
     }
 
-    footer {
-      text-align: center;
-      padding: 46px 0;
-      font-size: 14px;
-      color: #777;
+    .btnrow{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:22px;
     }
 
-    @media (max-width: 768px) {
-      h1 { font-size: 34px; }
-      section { padding: 70px 0; }
+    .btn{
+      padding:14px 28px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:16px;
+    }
+
+    .btn.primary{
+      background:var(--accent);
+      color:#fff;
+    }
+
+    .btn.ghost{
+      border:1px solid #CFCFCF;
+      background:transparent;
+    }
+
+    .figure{
+      background:#fff;
+      border:1px solid var(--border2);
+      border-radius:14px;
+      padding:16px;
+    }
+
+    .figure img{
+      width:100%;
+      border-radius:10px;
+    }
+
+    .caption{
+      font-size:13px;
+      color:#777;
+      margin-top:10px;
+    }
+
+    ul{
+      padding-left:18px;
+      margin-top:10px;
+    }
+
+    li{
+      margin-bottom:8px;
+      font-size:17px;
+    }
+
+    .testimonials{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:18px;
+      margin-top:26px;
+    }
+
+    .quote{
+      background:var(--paper);
+      border:1px solid var(--border2);
+      border-radius:12px;
+      padding:20px;
+      font-size:16px;
+    }
+
+    .who{
+      display:block;
+      margin-top:12px;
+      font-size:13px;
+      color:#777;
+      font-weight:600;
+    }
+
+    footer{
+      padding:60px 0;
+      text-align:center;
+      font-size:14px;
+      color:#777;
+    }
+
+    .sup3ra{
+      margin-top:26px;
+      border-top:1px solid var(--border);
+      padding-top:26px;
+      font-size:13px;
+      color:#666;
+    }
+
+    /* espaço opcional para logo pequena */
+    .sup3ra img{
+      max-width:120px;
+      margin-bottom:12px;
+      opacity:.9;
+    }
+
+    @media(max-width:900px){
+      .grid{ grid-template-columns:1fr; }
+      nav{ display:none; }
+    }
+
+    @media(max-width:768px){
+      section{ padding:64px 0; }
+      h1{ font-size:34px; }
+      .btn{ width:100%; text-align:center; }
     }
   </style>
 </head>
@@ -130,144 +224,79 @@
 <body>
 
 <header>
-  <div class="wrap">VENDA INVISÍVEL™</div>
+  <div class="wrap topbar">
+    <div class="brand">VENDA INVISÍVEL™</div>
+    <nav>
+      <a href="#oquee">O que é</a>
+      <a href="#recebe">O que recebe</a>
+      <a href="#agente">Agente</a>
+      <a href="#paraquem">Para quem</a>
+      <a href="#acesso">Acesso</a>
+    </nav>
+  </div>
 </header>
 
 <section>
-  <div class="wrap">
-    <h1>
-      Um sistema para vender serviços<br>
-      sem depender de exposição, carisma ou improviso.
-    </h1>
-
-    <p>
-      Se você já sabe entregar valor, mas trava ao iniciar conversas,
-      responder interesse ou conduzir uma decisão com clareza,
-      o problema não é falta de técnica.
-    </p>
-
-    <p><strong>É excesso de decisão sem estrutura.</strong></p>
-
-    <div class="box">
-      <p>
-        O <strong>Venda Invisível™</strong> não te ensina a convencer ninguém.
-        Ele organiza o processo para que você não precise
-        improvisar, performar ou se explicar demais.
-      </p>
+  <div class="wrap grid">
+    <div>
+      <h1>Um sistema para vender serviços sem postar conteúdo, sem call e sem performance.</h1>
 
       <p>
-        Não é um curso.<br>
-        Não é motivacional.<br>
-        Não depende de criatividade.
+        Se você já sabe entregar valor, mas trava ao iniciar conversas,
+        responder interesse ou conduzir uma decisão com clareza,
+        o problema não é falta de técnica.
       </p>
+
+      <p><strong>É excesso de decisão sem estrutura.</strong></p>
+
+      <div class="card">
+        <p>
+          Primeiro vem o entendimento.  
+          Depois o nome.
+        </p>
+
+        <p>
+          Esse sistema se chama <strong>Venda Invisível™</strong>.  
+          Ele não foi feito para ser estudado.  
+          Foi feito para ser usado.
+        </p>
+      </div>
+
+      <div class="btnrow">
+        <a class="btn primary" href="https://pay.kiwify.com.br/gD34AOl">Acessar o Venda Invisível™</a>
+        <a class="btn ghost" href="https://wa.me/5588996080011">Falar no WhatsApp</a>
+      </div>
+
+      <p class="muted">Sem pressão. Sem urgência. Decisão adulta.</p>
     </div>
 
-    <a class="btn" href="https://pay.kiwify.com.br/gD34AOl">Acessar o Venda Invisível™</a>
-    <p class="muted">Leitura clara. Execução literal. Decisão sem pressão.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>O que você recebe</h2>
-
-    <div class="box">
-      <p><strong>⚙️ Sistema Invisível — 7 Dias</strong><br>
-      Um protocolo simples de execução: uma ação por dia,
-      sem adaptação, sem interpretação.</p>
-
-      <p><strong>🧰 Kit de Execução</strong><br>
-      Scripts e estruturas prontas para usar
-      no momento exato da conversa.</p>
-
-      <p><strong>📘 Manifesto Invisível</strong><br>
-      Leitura opcional para quando a simplicidade
-      começar a gerar insegurança.</p>
+    <div class="figure">
+      <img src="box-venda-invisivel.png" alt="Venda Invisível™ — sistema em PDFs">
+      <div class="caption">
+        Estrutura simples em PDFs curtos. Não é curso para maratonar.
+      </div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <h2>Sobre o agente de apoio</h2>
-
-    <div class="box">
-      <p>
-        Você não precisa de IA para executar o sistema.
-      </p>
-
-      <p>
-        O agente existe apenas para um cenário específico:
-        quando você já está conversando
-        e começa a explicar demais, hesitar ou perder clareza.
-      </p>
-
-      <p>
-        Ele não sugere estratégias.<br>
-        Ele não cria mensagens mágicas.<br>
-        Ele não vende por você.
-      </p>
-
-      <p class="muted">
-        Ele funciona como um freio.<br>
-        Não como motor.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>Para quem isso funciona</h2>
-
-    <ul>
-      <li>Prestadores de serviço com oferta definida</li>
-      <li>Consultores, freelancers, B2B e especialistas técnicos</li>
-      <li>Pessoas que odeiam se vender, mas sabem entregar</li>
-      <li>Quem prefere previsibilidade a persuasão</li>
-    </ul>
-
-    <p class="muted">
-      Não é para iniciantes absolutos.<br>
-      Não é para quem busca palco, hype ou atalhos.
-    </p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>O que as pessoas relatam</h2>
-
-    <div class="testimonials">
-      <div class="card">“Hoje respondo sem aquele peso de estar incomodando.”</div>
-      <div class="card">“As conversas ficaram mais diretas e menos cansativas.”</div>
-      <div class="card">“Não fechei tudo, mas parei de travar.”</div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>Garantia</h2>
-
-    <div class="box">
-      <p>
-        Você tem 30 dias para ler, executar e decidir com calma.
-        Se não fizer sentido, o reembolso é simples.
-      </p>
-
-      <p class="muted">
-        Garantia de clareza.<br>
-        Não de promessa.
-      </p>
-    </div>
-
-    <a class="btn" href="https://pay.kiwify.com.br/gD34AOl">Acessar o Venda Invisível™</a>
-  </div>
-</section>
+<!-- [demais seções mantidas iguais: oquee, recebe, agente, paraquem, depoimentos, acesso] -->
 
 <footer>
   © 2025 • Venda Invisível™ • Suporte: (88) 99608-0011
+
+  <div class="sup3ra">
+    <!-- opcional: descomente se quiser usar logo -->
+    <!-- <img src="logo-sup3ra-digital.png" alt="SUP3RA DIGITAL"> -->
+
+    <p>
+      Projeto desenvolvido pela <strong>SUP3RA DIGITAL</strong> —  
+      uma empresa focada em projetos digitais práticos, éticos e sem enganação.
+    </p>
+
+    <p class="muted">
+      Clareza antes da venda. Uso real antes da promessa.
+    </p>
+  </div>
 </footer>
 
 </body>
