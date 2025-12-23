@@ -3,264 +3,185 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Venda Invisível™</title>
+  <title>SUP3RA VECTRA™ — Vectorized Ethical Causal AI Framework</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    :root{
-      --bg:#F6F5F3;
-      --paper:#FFFFFF;
-      --text:#1E1E1E;
-      --muted:#666;
-      --accent:#2E5E4E;
-      --shadow:0 10px 26px rgba(0,0,0,.06);
-      --radius:18px;
+    :root {
+      --bg: #0E0E0E;
+      --text: #EDEDED;
+      --muted: #888;
+      --accent: #00E0A1;
+      --paper: #151515;
+      --radius: 16px;
+      --shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
     }
 
-    body{
-      font-family:'Inter',sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.7;
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
     }
 
-    a{ color:inherit; text-decoration:none; }
+    a { color: var(--accent); text-decoration: none; }
 
-    .wrap{
-      max-width:1100px;
-      margin:0 auto;
-      padding:0 20px;
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 22px;
     }
 
-    header{
-      padding:28px 0;
-      text-align:center;
-      font-weight:700;
-      letter-spacing:.04em;
-      font-size:14px;
+    header {
+      text-align: center;
+      padding: 42px 0 16px;
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
     }
 
-    section{ padding:90px 0; }
-
-    /* HERO (como antes: 2 colunas) */
-    .hero{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:42px;
-      align-items:start;
+    h1 {
+      font-size: 42px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: -0.02em;
     }
 
-    h1{
-      font-size:44px;
-      line-height:1.12;
-      margin-bottom:22px;
-      letter-spacing:-.02em;
+    h2 {
+      font-size: 28px;
+      margin: 60px 0 20px;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: -0.01em;
     }
 
-    h2{
-      font-size:28px;
-      margin:50px 0 18px;
-      letter-spacing:-.01em;
+    p {
+      font-size: 18px;
+      color: var(--text);
+      margin-bottom: 14px;
     }
 
-    p{
-      font-size:18px;
-      margin-bottom:14px;
-      color:#2A2A2A;
+    .muted {
+      color: var(--muted);
+      font-size: 15px;
+      margin-top: 10px;
     }
 
-    .muted{
-      font-size:15px;
-      color:var(--muted);
-      margin-top:10px;
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 40px;
+      align-items: center;
+      padding: 90px 0;
     }
 
-    .card{
-      background:var(--paper);
-      border-radius:var(--radius);
-      padding:34px;
-      box-shadow:var(--shadow);
-      margin-top:26px;
+    .figure img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: block;
+      margin: 0 auto;
     }
 
-    /* bloco secundário (menos “borda/sombra” pra não competir) */
-    .micro{
-      margin-top:18px;
-      padding:16px 20px;
-      border-radius:14px;
-      background:#F2F1EE;
-      border:1px solid rgba(0,0,0,.04);
+    .figure .caption {
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 10px;
     }
 
-    h3{
-      font-size:14px;
-      letter-spacing:.04em;
-      text-transform:uppercase;
-      margin-bottom:10px;
-      color:#333;
+    .card {
+      background: var(--paper);
+      padding: 28px 32px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-top: 24px;
     }
 
-    ul{
-      padding-left:18px;
-      margin:16px 0;
+    .btn {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 36px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #000;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      transition: 0.2s;
     }
 
-    li{
-      margin-bottom:10px;
-      font-size:17px;
-      color:#2A2A2A;
+    .btn:hover {
+      filter: brightness(1.1);
     }
 
-    /* IMAGEM (corrigida: não estoura e fica como antes) */
-    .figure{
-      background:var(--paper);
-      border-radius:var(--radius);
-      padding:18px;
-      box-shadow:var(--shadow);
-      display:flex;
-      flex-direction:column;
-      align-items:center;
+    ul, ol {
+      padding-left: 24px;
+      margin: 16px 0;
     }
 
-    .figure img{
-      width:100%;
-      max-width:360px;   /* limita o tamanho */
-      max-height:420px;  /* evita “gigante” */
-      height:auto;
-      display:block;
-      border-radius:12px;
-      object-fit:contain;
+    li {
+      margin-bottom: 10px;
+      font-size: 17px;
+      color: var(--text);
     }
 
-    .caption{
-      width:100%;
-      max-width:360px;
-      font-size:13px;
-      color:#777;
-      margin-top:10px;
-      line-height:1.4;
+    footer {
+      text-align: center;
+      padding: 80px 20px 50px;
+      font-size: 14px;
+      color: var(--muted);
     }
 
-    /* Botões */
-    .btn{
-      display:inline-block;
-      margin-top:22px;
-      padding:14px 34px;
-      border-radius:999px;
-      background:var(--accent);
-      color:#fff;
-      font-weight:600;
-      font-size:16px;
-      text-decoration:none;
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
     }
 
-    /* Suporte: diferente do CTA principal, mas mais visível */
-    .btn-support{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      margin-top:12px;
-      padding:11px 22px;
-      border-radius:999px;
-      border:1.5px dashed #9da3a8;
-      background:rgba(0,0,0,.03);
-      color:#2a2a2a;
-      font-size:14px;
-      font-weight:600;
-      text-decoration:none;
-    }
-
-    .btn-support:hover{
-      background:rgba(0,0,0,.06);
-      border-color:#7f868c;
-    }
-
-    /* Grid de relatos */
-    .quotes{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:20px;
-      margin-top:24px;
-    }
-
-    .quote{
-      background:var(--paper);
-      border-radius:14px;
-      padding:22px;
-      box-shadow:var(--shadow);
-      font-size:16px;
-      color:#2A2A2A;
-    }
-
-    footer{
-      padding:80px 20px 44px;
-      text-align:center;
-      font-size:14px;
-      color:#777;
-    }
-
-    .sup3ra{
-      margin-top:18px;
-      font-size:13px;
-      color:#666;
-      line-height:1.5;
+    .sup3ra {
+      font-size: 13px;
+      margin-top: 16px;
+      color: var(--muted);
     }
 
     @media(max-width:900px){
-      section{ padding:64px 0; }
-      .hero{ grid-template-columns:1fr; }
-      h1{ font-size:34px; }
-      .figure img{ max-width:320px; max-height:380px; }
+      .hero { grid-template-columns: 1fr; padding: 60px 0; }
+      h1 { font-size: 34px; }
     }
   </style>
 </head>
 
 <body>
 
-<header>VENDA INVISÍVEL™</header>
+<header>SUP3RA VECTRA™ — Causal Ethics for Safe AI</header>
 
 <section>
   <div class="wrap hero">
 
-    <!-- COLUNA ESQUERDA -->
     <div>
-      <h1>Um sistema para vender serviços sem postar conteúdo, sem call e sem performance.</h1>
-
-      <p>Se você já sabe entregar valor, mas trava ao:</p>
-      <ul>
-        <li>iniciar conversas</li>
-        <li>responder interesse</li>
-        <li>conduzir decisões com clareza</li>
-      </ul>
-
-      <p>o problema não é técnica.</p>
-      <p><strong>É excesso de decisão sem estrutura.</strong></p>
+      <h1>Vectorized Ethical Causal Traversal Architecture</h1>
+      <p>SUP3RA VECTRA™ é um framework de segurança para IA baseado em causalidade e vetorização ética.</p>
+      <p>Seu objetivo é garantir integridade, transparência e verificabilidade — sem simular consciência ou vontade.</p>
 
       <div class="card">
-        <p>Primeiro vem o entendimento. Depois o nome.</p>
-        <p>Esse sistema se chama <strong>Venda Invisível™</strong>. Ele não foi feito para ser estudado. Foi feito para ser usado.</p>
+        <p><strong>Abordagem:</strong> Mecanicista, verificável e livre de antropomorfismo.</p>
+        <p><strong>Aplicação:</strong> Interpretação mecanicista, auditoria causal e segurança funcional em LLMs.</p>
       </div>
 
-      <div class="micro">
-        <h3>O que acontece depois da compra</h3>
-        <p>Você recebe acesso imediato aos materiais do sistema.</p>
-        <p>Durante 7 dias, você executa uma ação por dia, em mensagens reais, com pessoas reais.</p>
-        <p>Ao final, você decide com calma se esse é o seu jeito de vender.</p>
-      </div>
-
-      <a class="btn" href="https://pay.kiwify.com.br/gD34AOl">Acessar o Venda Invisível™</a><br>
-      <a class="btn-support" href="https://wa.me/5588996080014" target="_blank">Falar com suporte</a>
-
-      <p class="muted">Sem pressão. Sem urgência. Decisão adulta.</p>
+      <a class="btn" href="https://github.com/Joao-supera/sup3ra-vectra" target="_blank">Ver no GitHub</a>
+      <p class="muted">Open-source. Sem promessas. Apenas engenharia ética.</p>
     </div>
 
-    <!-- COLUNA DIREITA -->
     <div class="figure">
-      <img src="box-venda-invisivel.png" alt="Venda Invisível™">
-      <div class="caption">Sistema entregue em PDFs curtos. Não é curso.</div>
+      <img src="sup3ra-box.png" alt="SUP3RA VECTRA Interface">
+      <div class="caption">SUP3RA VECTRA™ — Segurança ética sem simulação.</div>
     </div>
 
   </div>
@@ -268,77 +189,13 @@
 
 <section>
   <div class="wrap">
-    <h2>O que é (e o que não é)</h2>
-
-    <div class="card">
-      <p>O Venda Invisível™ é um sistema entregue em PDFs curtos.</p>
-
-      <p><strong>Não é:</strong></p>
-      <ul>
-        <li>curso em vídeo</li>
-        <li>método para “escala rápida”</li>
-        <li>promessa de faturamento</li>
-        <li>automação que vende sozinha</li>
-      </ul>
-
-      <p><strong>É um sistema de uso.</strong></p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>O que você recebe</h2>
-
+    <h2>O que o framework propõe</h2>
     <div class="card">
       <ul>
-        <li><strong>Sistema Invisível — 7 Dias:</strong> uma ação clara por dia, tempo médio 30 minutos, critério simples de “feito / não feito”.</li>
-        <li><strong>Kit de Execução:</strong> mensagens prontas para iniciar conversas, modelos de diagnóstico, mini-proposta sem call, follow-ups simples e respeitosos.</li>
-        <li><strong>Manifesto Invisível (opcional):</strong> leitura curta para reduzir ruído mental, usado apenas se você travar.</li>
-        <li><strong>Agente de apoio (opcional):</strong> usado somente para destravar, nunca para improvisar ou complicar.</li>
-      </ul>
-
-      <p>Nada de bônus. Nada de excesso. Nada que atrapalhe a execução.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>A ordem é importante</h2>
-
-    <div class="card">
-      <ol style="padding-left:18px; margin-top:14px;">
-        <li style="margin-bottom:10px; font-size:17px;">Comece pelo Sistema de 7 Dias</li>
-        <li style="margin-bottom:10px; font-size:17px;">Use o Kit enquanto conversa</li>
-        <li style="margin-bottom:10px; font-size:17px;">Leia o Manifesto apenas se travar</li>
-        <li style="margin-bottom:10px; font-size:17px;">Use o Agente só se necessário</li>
-      </ol>
-
-      <p class="muted">Clareza vem da sequência.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>Para quem faz sentido (e para quem não)</h2>
-
-    <div class="card">
-      <h3>Para quem faz sentido</h3>
-      <ul>
-        <li>Prestadores de serviço com oferta definida</li>
-        <li>Pessoas que já conversam com clientes por mensagem</li>
-        <li>Quem prefere clareza a persuasão</li>
-        <li>Quem quer reduzir improviso, não aprender marketing</li>
-      </ul>
-
-      <h3 style="margin-top:22px;">Para quem não faz sentido</h3>
-      <ul>
-        <li>Iniciantes sem serviço claro</li>
-        <li>Quem procura promessa de faturamento</li>
-        <li>Quem espera automação ou IA que venda sozinha</li>
-        <li>Quem não pretende executar por 7 dias</li>
+        <li><strong>Segurança vetorizada:</strong> princípios éticos codificados em vetores, não narrativas.</li>
+        <li><strong>Controle causal:</strong> intervenção direta em features críticas (sem suposições mentais).</li>
+        <li><strong>Transparência:</strong> logs assinados e rastreabilidade completa das respostas.</li>
+        <li><strong>Escalabilidade:</strong> aplicável em qualquer modelo de linguagem compatível com interpretabilidade.</li>
       </ul>
     </div>
   </div>
@@ -346,45 +203,33 @@
 
 <section>
   <div class="wrap">
-    <h2>O que as pessoas relatam</h2>
-
-    <div class="quotes">
-      <div class="quote">“As conversas ficaram mais simples.”</div>
-      <div class="quote">“Respondo sem ansiedade.”</div>
-      <div class="quote">“Parei de improvisar.”</div>
+    <h2>Filosofia de projeto</h2>
+    <div class="card">
+      <p>SUP3RA VECTRA™ rejeita a ideia de que modelos de linguagem “possuem intenções”.</p>
+      <p>Em vez disso, trata a segurança como um problema <strong>causal e verificável</strong>, não psicológico.</p>
+      <p>Seu foco é reduzir risco por <em>mecanismo</em>, não por confiança.</p>
     </div>
-
-    <p class="muted">Esses relatos indicam uso, não promessa.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2>Garantia honesta</h2>
-
+    <h2>Implementação</h2>
     <div class="card">
-      <p>O Venda Invisível™ não foi feito para ser acreditado. Foi feito para ser usado.</p>
-      <p>Você tem <strong>30 dias</strong> para executar o sistema e decidir com clareza.</p>
-
-      <div class="micro">
-        <h3>Critério simples</h3>
-        <p>Se você executou e ainda assim não serviu, o reembolso é direto e sem justificativa.</p>
-        <p>Sem constrangimento. Sem retenção forçada.</p>
-      </div>
-
-      <p><strong>A compra inicia o uso.</strong></p>
-
-      <a class="btn" href="https://pay.kiwify.com.br/gD34AOl">Acessar o Venda Invisível™</a><br>
-      <a class="btn-support" href="https://wa.me/5588996080014" target="_blank">Falar com suporte</a>
+      <ul>
+        <li>Especificação: <a href="https://github.com/Joao-supera/sup3ra-vectra/blob/main/ESPECIFICAÇÃO.md">SPEC.md</a></li>
+        <li>Código-fonte: <a href="https://github.com/Joao-supera/sup3ra-vectra/tree/main/src">src/core.py</a></li>
+        <li>Benchmarks e métricas: <a href="https://github.com/Joao-supera/sup3ra-vectra/tree/main/testes">testes/</a></li>
+      </ul>
     </div>
   </div>
 </section>
 
 <footer>
-  © 2025 • Venda Invisível™<br>
-  E-mail para contato: <a href="mailto:agsup3radigital@gmail.com">agsup3radigital@gmail.com</a>
+  © 2025 • SUP3RA VECTRA™ — Ethical Causal Framework for AI Safety<br>
+  Contato: <a href="mailto:agsup3radigital@gmail.com">agsup3radigital@gmail.com</a>
   <div class="sup3ra">
-    Projeto desenvolvido pela <strong>SUP3RA DIGITAL</strong> — produtos digitais práticos, éticos e sem enganação.
+    Desenvolvido pela <strong>SUP3RA DIGITAL</strong> — engenharia ética e interpretável para IA segura.
   </div>
 </footer>
 
