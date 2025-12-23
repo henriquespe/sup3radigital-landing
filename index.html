@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +15,9 @@
       --text: #EDEDED;
       --muted: #888;
       --accent: #00E0A1;
-      --paper: #151515;
+      --panel: #161616;
       --radius: 16px;
-      --shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+      --shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
     }
 
     body {
@@ -25,9 +25,13 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--accent); text-decoration: none; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
     .wrap {
       max-width: 1080px;
@@ -37,7 +41,7 @@
 
     header {
       text-align: center;
-      padding: 42px 0 16px;
+      padding: 46px 0 18px;
       font-size: 15px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -47,7 +51,7 @@
     h1 {
       font-size: 42px;
       line-height: 1.1;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       color: #fff;
       font-weight: 700;
       letter-spacing: -0.02em;
@@ -55,7 +59,7 @@
 
     h2 {
       font-size: 28px;
-      margin: 60px 0 20px;
+      margin: 60px 0 22px;
       color: var(--accent);
       font-weight: 600;
       letter-spacing: -0.01em;
@@ -63,8 +67,8 @@
 
     p {
       font-size: 18px;
-      color: var(--text);
       margin-bottom: 14px;
+      color: var(--text);
     }
 
     .muted {
@@ -73,35 +77,15 @@
       margin-top: 10px;
     }
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 40px;
-      align-items: center;
+    section {
       padding: 90px 0;
     }
 
-    .figure img {
-      width: 100%;
-      max-width: 420px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      display: block;
-      margin: 0 auto;
-    }
-
-    .figure .caption {
-      text-align: center;
-      font-size: 14px;
-      color: var(--muted);
-      margin-top: 10px;
-    }
-
     .card {
-      background: var(--paper);
-      padding: 28px 32px;
+      background: var(--panel);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
+      padding: 30px 34px;
       margin-top: 24px;
     }
 
@@ -115,7 +99,7 @@
       font-weight: 600;
       font-size: 16px;
       text-decoration: none;
-      transition: 0.2s;
+      transition: 0.2s ease;
     }
 
     .btn:hover {
@@ -142,7 +126,6 @@
 
     footer a {
       color: var(--accent);
-      text-decoration: none;
     }
 
     .sup3ra {
@@ -152,7 +135,7 @@
     }
 
     @media(max-width:900px){
-      .hero { grid-template-columns: 1fr; padding: 60px 0; }
+      section { padding: 60px 0; }
       h1 { font-size: 34px; }
     }
   </style>
@@ -163,39 +146,30 @@
 <header>SUP3RA VECTRA™ — Causal Ethics for Safe AI</header>
 
 <section>
-  <div class="wrap hero">
+  <div class="wrap">
+    <h1>Vectorized Ethical Causal Traversal Architecture</h1>
+    <p><strong>SUP3RA VECTRA™</strong> is a framework for mechanistic AI safety based on causal and vectorized ethics.</p>
+    <p>It ensures <strong>integrity</strong>, <strong>transparency</strong>, and <strong>verifiability</strong> — without anthropomorphic assumptions or simulated intent.</p>
 
-    <div>
-      <h1>Vectorized Ethical Causal Traversal Architecture</h1>
-      <p>SUP3RA VECTRA™ é um framework de segurança para IA baseado em causalidade e vetorização ética.</p>
-      <p>Seu objetivo é garantir integridade, transparência e verificabilidade — sem simular consciência ou vontade.</p>
-
-      <div class="card">
-        <p><strong>Abordagem:</strong> Mecanicista, verificável e livre de antropomorfismo.</p>
-        <p><strong>Aplicação:</strong> Interpretação mecanicista, auditoria causal e segurança funcional em LLMs.</p>
-      </div>
-
-      <a class="btn" href="https://github.com/Joao-supera/sup3ra-vectra" target="_blank">Ver no GitHub</a>
-      <p class="muted">Open-source. Sem promessas. Apenas engenharia ética.</p>
+    <div class="card">
+      <p><strong>Approach:</strong> Mechanistic, auditable, and free from human-like inference.</p>
+      <p><strong>Purpose:</strong> Enable causal intervention and ethical consistency in language model behavior.</p>
     </div>
 
-    <div class="figure">
-      <img src="sup3ra-box.png" alt="SUP3RA VECTRA Interface">
-      <div class="caption">SUP3RA VECTRA™ — Segurança ética sem simulação.</div>
-    </div>
-
+    <a class="btn" href="https://github.com/Joao-supera/sup3ra-vectra" target="_blank">View Project on GitHub</a>
+    <p class="muted">Open-source. Ethical. Mechanistic. Transparent.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2>O que o framework propõe</h2>
+    <h2>Framework Principles</h2>
     <div class="card">
       <ul>
-        <li><strong>Segurança vetorizada:</strong> princípios éticos codificados em vetores, não narrativas.</li>
-        <li><strong>Controle causal:</strong> intervenção direta em features críticas (sem suposições mentais).</li>
-        <li><strong>Transparência:</strong> logs assinados e rastreabilidade completa das respostas.</li>
-        <li><strong>Escalabilidade:</strong> aplicável em qualquer modelo de linguagem compatível com interpretabilidade.</li>
+        <li><strong>Vectorized Safety:</strong> Ethical constraints defined as mathematical structures, not narratives.</li>
+        <li><strong>Causal Control:</strong> Intervene directly in active features rather than assuming intentions.</li>
+        <li><strong>Transparency:</strong> Every decision and transformation is cryptographically logged.</li>
+        <li><strong>Scalability:</strong> Works across models supporting interpretability layers and feature access.</li>
       </ul>
     </div>
   </div>
@@ -203,33 +177,44 @@
 
 <section>
   <div class="wrap">
-    <h2>Filosofia de projeto</h2>
+    <h2>Design Philosophy</h2>
     <div class="card">
-      <p>SUP3RA VECTRA™ rejeita a ideia de que modelos de linguagem “possuem intenções”.</p>
-      <p>Em vez disso, trata a segurança como um problema <strong>causal e verificável</strong>, não psicológico.</p>
-      <p>Seu foco é reduzir risco por <em>mecanismo</em>, não por confiança.</p>
+      <p>SUP3RA VECTRA™ rejects the notion that large language models possess goals or desires.</p>
+      <p>Instead, it treats safety as a <strong>causal engineering problem</strong> — measurable, auditable, and entirely mechanistic.</p>
+      <p>Its objective is to ensure ethical reliability without simulating consciousness or human motivation.</p>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2>Implementação</h2>
+    <h2>Implementation Overview</h2>
     <div class="card">
       <ul>
-        <li>Especificação: <a href="https://github.com/Joao-supera/sup3ra-vectra/blob/main/ESPECIFICAÇÃO.md">SPEC.md</a></li>
-        <li>Código-fonte: <a href="https://github.com/Joao-supera/sup3ra-vectra/tree/main/src">src/core.py</a></li>
-        <li>Benchmarks e métricas: <a href="https://github.com/Joao-supera/sup3ra-vectra/tree/main/testes">testes/</a></li>
+        <li><strong>Specification:</strong> <a href="https://github.com/Joao-supera/sup3ra-vectra/blob/main/ESPECIFICAÇÃO.md" target="_blank">SPEC.md</a></li>
+        <li><strong>Source Code:</strong> <a href="https://github.com/Joao-supera/sup3ra-vectra/tree/main/src" target="_blank">src/core.py</a></li>
+        <li><strong>Tests and Benchmarks:</strong> <a href="https://github.com/Joao-supera/sup3ra-vectra/tree/main/testes" target="_blank">testes/</a></li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Ethical Position</h2>
+    <div class="card">
+      <p>SUP3RA VECTRA™ prioritizes deterministic ethics: systems that act safely without assuming self-awareness or empathy.</p>
+      <p>All models under this framework must comply with <strong>verifiable, feature-level constraints</strong>.</p>
+      <p>This ensures <em>auditability</em> over belief, and <em>mechanism</em> over simulation.</p>
     </div>
   </div>
 </section>
 
 <footer>
-  © 2025 • SUP3RA VECTRA™ — Ethical Causal Framework for AI Safety<br>
-  Contato: <a href="mailto:agsup3radigital@gmail.com">agsup3radigital@gmail.com</a>
+  © 2025 • SUP3RA VECTRA™ — Vectorized Ethical Causal Framework for AI Safety<br>
+  Contact: <a href="mailto:agsup3radigital@gmail.com">agsup3radigital@gmail.com</a>
   <div class="sup3ra">
-    Desenvolvido pela <strong>SUP3RA DIGITAL</strong> — engenharia ética e interpretável para IA segura.
+    Developed by <strong>SUP3RA DIGITAL</strong> — ethical, mechanistic engineering for interpretable AI systems.
   </div>
 </footer>
 
