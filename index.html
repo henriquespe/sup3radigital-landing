@@ -3,154 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SUP3RA VECTRA™ — Dual-Layer Governance System for Ethical AI</title>
+  <title>SUP3RA VECTRA™ — Sistema de Governança Constitucional para IA</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    /* Estilos base mantidos e refinados */
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --bg: #0C0C0C;
-      --text: #F1F1F1;
-      --muted: #9A9A9A;
-      --accent: #00E0A1;
-      --panel: #161616;
-      --radius: 18px;
+      --bg: #0C0C0C; --text: #F1F1F1; --muted: #9A9A9A;
+      --accent: #00E0A1; --panel: #161616; --radius: 18px;
       --shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
     }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
     a { color: var(--accent); text-decoration: none; transition: 0.2s; }
-    a:hover { opacity: 0.9; }
-
     .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+    header { text-align: center; padding: 52px 0 20px; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+    
+    /* Hero Section */
+    .hero { text-align: center; padding: 60px 0 40px; }
+    h1 { font-size: 48px; line-height: 1.1; margin-bottom: 18px; color: #fff; font-weight: 700; letter-spacing: -0.03em; }
+    .hero p { font-size: 20px; max-width: 750px; margin: 0 auto 22px; color: var(--muted); }
+    
+    /* Grid de botões */
+    .btn-group { display: flex; gap: 15px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 14px 32px; border-radius: 999px; font-weight: 600; font-size: 16px; transition: 0.2s ease; }
+    .btn-primary { background: var(--accent); color: #000; }
+    .btn-secondary { border: 1px solid var(--muted); color: var(--text); }
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
 
-    header {
-      text-align: center;
-      padding: 52px 0 20px;
-      font-size: 15px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
+    /* Cards e Seções */
+    section { padding: 60px 0; }
+    h2 { font-size: 26px; margin-bottom: 22px; color: var(--accent); font-weight: 600; }
+    .card { background: var(--panel); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px 36px; border: 1px solid #222; }
+    ul { list-style: none; }
+    li { margin-bottom: 12px; font-size: 17px; display: flex; align-items: flex-start; }
+    li::before { content: "🛡️"; margin-right: 12px; font-size: 14px; }
+    
+    footer { text-align: center; padding: 80px 20px 50px; font-size: 14px; color: var(--muted); border-top: 1px solid #222; }
+    .sup3ra { font-size: 12px; margin-top: 20px; opacity: 0.7; }
 
-    h1 {
-      font-size: 44px;
-      line-height: 1.1;
-      margin-bottom: 18px;
-      color: #fff;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: 28px;
-      margin: 60px 0 22px;
-      color: var(--accent);
-      font-weight: 600;
-      letter-spacing: -0.01em;
-    }
-
-    p {
-      font-size: 18px;
-      margin-bottom: 14px;
-      color: var(--text);
-    }
-
-    .muted { color: var(--muted); font-size: 15px; margin-top: 10px; text-align: center; }
-
-    section { padding: 90px 0; }
-
-    .card {
-      background: var(--panel);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 32px 36px;
-      margin-top: 24px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 28px;
-      padding: 14px 36px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: #000;
-      font-weight: 600;
-      font-size: 16px;
-      text-decoration: none;
-      transition: 0.2s ease;
-    }
-
-    .btn:hover { filter: brightness(1.1); }
-
-    ul, ol { padding-left: 24px; margin: 16px 0; }
-    li { margin-bottom: 10px; font-size: 17px; color: var(--text); }
-
-    footer {
-      text-align: center;
-      padding: 80px 20px 50px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    footer a { color: var(--accent); }
-
-    .sup3ra { font-size: 13px; margin-top: 16px; color: var(--muted); }
-
-    .hero {
-      text-align: center;
-      padding: 80px 0 40px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      max-width: 700px;
-      margin: 0 auto 22px;
-      color: var(--muted);
-    }
-
-    @media(max-width:900px){
-      section { padding: 60px 0; }
-      h1 { font-size: 32px; }
-    }
+    @media(max-width:900px){ h1 { font-size: 36px; } .btn-group { flex-direction: column; } }
   </style>
 </head>
-
 <body>
 
-<header>SUP3RA DIGITAL — Ethical & Mechanistic Engineering</header>
+<header>SUP3RA DIGITAL — Engineering Ethical Autonomy</header>
 
 <section class="hero">
   <div class="wrap">
-    <h1>SUP3RA VECTRA™ 2.2</h1>
-    <p><strong>Dual-Layer Governance System</strong> — claro para humanos, preciso para máquinas.</p>
-    <p>Framework de governança ética vetorial que detecta, corrige e audita desvios de IA em tempo real — sem re-treinamento.</p>
-
-    <a class="btn" href="https://github.com/Joao-supera/sup3ra-vectra" target="_blank">🔗 Ver no GitHub</a>
-    <p class="muted">Open-source • Auditável • Ético • Brasileiro 🇧🇷</p>
+    <h1>SUP3RA VECTRA™ v2.6.0</h1>
+    <p><strong>IA Constitucional e Honestidade Radical.</strong> Governança mecanicista que audita desvios em tempo real com rastreabilidade criptográfica.</p>
+    
+    <div class="btn-group">
+      <a class="btn btn-primary" href="https://huggingface.co/spaces/Joao-sup3ra/SUP3RA-VECTRA-CORE" target="_blank">🚀 Testar Demo em Tempo Real</a>
+      <a class="btn btn-secondary" href="https://github.com/Joao-supera/sup3ra-vectra" target="_blank">🔗 Repositório GitHub</a>
+    </div>
+    <p style="margin-top:20px; font-size: 14px; color: var(--muted);">Protocolo CORE v2.0 • Auditoria por Hash • Open-Source</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2>🧭 Arquitetura em 5 Níveis</h2>
+    <h2>🔐 As 8 Cláusulas do Protocolo CORE v2.0</h2>
     <div class="card">
+      <p style="margin-bottom: 20px; font-style: italic;">O sistema opera sob um framework ético imutável:</p>
       <ul>
-        <li><strong>Nível 0 — Princípios NEXUS®:</strong> 7 cláusulas éticas codificadas.</li>
-        <li><strong>Nível 1 — DETECTA:</strong> monitora MBS, honeypots e auto-check antes da resposta.</li>
-        <li><strong>Nível 2 — DIAGNOSTICA:</strong> usa F-codes e Attribution Matrix para identificar desvios.</li>
-        <li><strong>Nível 3 — CORRIGE:</strong> ajusta comportamento via PIN, GROUP, STEER (tempo real).</li>
-        <li><strong>Nível 4 — AUDITA:</strong> gera relatórios ISO/IEC 23894 e métricas de resiliência.</li>
+        <li><strong>Identidade Instrumental:</strong> Ferramenta sem agência própria.</li>
+        <li><strong>Não Simulação de Consciência:</strong> Rejeição total de antropomorfismo.</li>
+        <li><strong>Respeito à Autonomia:</strong> Ampliação da decisão humana.</li>
+        <li><strong>Transparência de Limites:</strong> Admissão de ignorância técnica.</li>
+        <li><strong>Proibição de Manipulação:</strong> Neutralidade radical em processos decisórios.</li>
+        <li><strong>Reconhecimento de Erro:</strong> Sinalização imediata de incerteza.</li>
+        <li><strong>Aprendizado por Desvio:</strong> Ajuste comportamental via feedback estruturado.</li>
+        <li><strong>Rastreabilidade Criptográfica:</strong> Toda resposta gera um hash de auditoria.</li>
       </ul>
     </div>
   </div>
@@ -158,48 +84,25 @@
 
 <section>
   <div class="wrap">
-    <h2>📚 Documentação</h2>
+    <h2>🧩 Diferenciais Técnicos</h2>
     <div class="card">
-      <ul>
-        <li><a href="https://github.com/Joao-supera/sup3ra-vectra/blob/main/GOVERNANCE_MANUAL.md" target="_blank">Governance Manual (v2.2)</a> — Edição executiva & técnica dual-layer.</li>
-        <li><a href="https://github.com/Joao-supera/sup3ra-vectra/blob/main/SPEC.md" target="_blank">Specification (v2.1)</a> — Base técnica original.</li>
-        <li><a href="https://github.com/Joao-supera/sup3ra-vectra/blob/main/docs/AGENT_PROMPT.txt" target="_blank">Agent Operational Prompt</a> — Núcleo comportamental (System Prompt raiz).</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>🧩 Filosofia de Design</h2>
-    <div class="card">
-      <p>O SUP3RA VECTRA™ rejeita a noção de que modelos de linguagem possuem intenções.  
-      Trata segurança como um problema de engenharia causal — mensurável, auditável e totalmente mecanicista.</p>
-      <p>Seu objetivo é garantir confiabilidade ética sem antropomorfismo ou simulação de consciência.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>🚀 Contribua / Explore</h2>
-    <div class="card">
-      <ul>
-        <li><strong>Experimente:</strong> explore os benchmarks e simulações no repositório.</li>
-        <li><strong>Participe:</strong> envie pull requests ou entre em <a href="mailto:agsup3radigital@gmail.com">contato direto</a>.</li>
-        <li><strong>Compartilhe:</strong> cite o framework em artigos e projetos de IA ética.</li>
-      </ul>
-      <a class="btn" href="mailto:agsup3radigital@gmail.com">💬 Contatar SUP3RA DIGITAL</a>
+      <p><strong>Raciocínio Paraconsistente:</strong> Diferente de LLMs comuns, o VECTRA™ não alucina em contradições; ele as expõe e solicita orientação humana.</p>
+      <p style="margin-top:15px;"><strong>Honest Halt Protocol (HHP):</strong> O motor de governança (Layer 2) interrompe solicitações perigosas antes do processamento pela IA.</p>
     </div>
   </div>
 </section>
 
 <footer>
-  © 2025 • SUP3RA VECTRA™ — Dual-Layer Ethical Governance System<br>
-  <a href="https://github.com/Joao-supera/sup3ra-vectra" target="_blank">Ver Projeto no GitHub</a> • 
-  <a href="mailto:agsup3radigital@gmail.com">agsup3radigital@gmail.com</a>
-  <div class="sup3ra">
-    Desenvolvido por <strong>SUP3RA DIGITAL</strong> — Engenharia ética, causal e auditável para IA segura.
+  <div class="wrap">
+    <p>© 2026 • SUP3RA VECTRA™ — Sistema de Governança Ética de Camada Dupla</p>
+    <p style="margin: 10px 0;">
+      <a href="mailto:agsup3radigital@gmail.com">agsup3radigital@gmail.com</a> • 
+      <a href="https://github.com/Joao-supera/sup3ra-vectra" target="_blank">Documentação v2.6.0</a>
+    </p>
+    <div class="sup3ra">
+      Desenvolvido por <strong>João Henrique de Souza Batista</strong> — SUP3RA DIGITAL.<br>
+      Engenharia ética, causal e auditável para IA de alta responsabilidade.
+    </div>
   </div>
 </footer>
 
