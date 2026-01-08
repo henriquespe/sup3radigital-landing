@@ -12,42 +12,53 @@
       --accent: #00E0A1; --panel: #161616; --radius: 18px;
     }
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    a { color: var(--accent); text-decoration: none; transition: 0.2s; }
+    
     .wrap { max-width: 1100px; margin: 0 auto; padding: 0 25px; }
     header { text-align: center; padding: 40px 0 10px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
     
     /* Hero Section */
-    .hero { text-align: center; padding: 100px 0 60px; border-bottom: 1px solid #1A1A1A; }
+    .hero { text-align: center; padding: 80px 0 40px; }
     h1 { font-size: 56px; line-height: 1.1; margin-bottom: 24px; color: #fff; font-weight: 800; letter-spacing: -0.04em; }
     .hero p { font-size: 22px; max-width: 850px; margin: 0 auto 30px; color: var(--muted); }
-    .badge-doi { font-family: monospace; background: #1A1A1A; padding: 8px 16px; border-radius: 6px; color: var(--accent); font-size: 14px; border: 1px solid #333; display: inline-block; }
+    .badge-doi { font-family: monospace; background: #1A1A1A; padding: 8px 16px; border-radius: 6px; color: var(--accent); font-size: 14px; border: 1px solid #333; display: inline-block; margin-bottom: 20px; }
 
-    /* Buttons */
-    .btn-group { display: flex; gap: 15px; justify-content: center; margin: 40px 0; flex-wrap: wrap; }
-    .btn { display: inline-block; padding: 16px 36px; border-radius: 999px; font-weight: 700; font-size: 16px; transition: 0.3s ease; cursor: pointer; text-align: center; }
-    .btn-primary { background: var(--accent); color: #000; box-shadow: 0 0 25px rgba(0, 224, 161, 0.2); }
-    .btn-secondary { border: 1px solid #333; color: var(--text); background: rgba(255,255,255,0.03); }
-    .btn-whatsapp { background: #25D366; color: #fff; margin-top: 20px; box-shadow: 0 0 20px rgba(37, 211, 102, 0.2); }
-    .btn:hover { transform: translateY(-3px); filter: brightness(1.1); }
+    /* SAAS CONTAINER - INTEGRAÇÃO DIRETA */
+    .saas-container {
+      background: #111;
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin: 40px auto;
+      height: 700px;
+      box-shadow: 0 0 50px rgba(0, 224, 161, 0.1);
+      position: relative;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
 
     /* Bio Section */
     .bio-section { border-top: 1px solid #1A1A1A; padding: 100px 0; background: #0C0C0C; }
     .bio-container { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; justify-content: center; }
     .bio-img { width: 280px; height: 280px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; box-shadow: 0 0 30px rgba(0, 224, 161, 0.2); }
     .bio-content { flex: 1; min-width: 320px; }
-    .quote-box { background: rgba(0, 224, 161, 0.05); padding: 25px; border-radius: 12px; border-left: 4px solid var(--accent); margin-top: 25px; }
 
-    /* Setores e Cenários */
-    section { padding: 90px 0; }
-    h2 { font-size: 36px; margin-bottom: 50px; text-align: center; font-weight: 800; letter-spacing: -0.02em; }
-    .scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+    /* Grid de Cenários */
+    .scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 50px; }
     .scenario-box { background: #111; border-radius: 24px; padding: 40px; border-left: 5px solid var(--accent); }
     .scenario-role { font-weight: 800; color: #fff; font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 15px; display: block; }
 
-    footer { text-align: center; padding: 80px 20px 60px; font-size: 14px; color: var(--muted); border-top: 1px solid #1A1A1A; }
-    .sup3ra-brand { font-weight: 800; letter-spacing: 2px; color: #fff; margin-bottom: 10px; display: block; }
+    .btn-whatsapp { background: #25D366; color: #fff; padding: 16px 36px; border-radius: 999px; font-weight: 700; display: inline-block; margin-top: 30px; text-decoration: none; }
 
-    @media(max-width:800px){ h1 { font-size: 40px; } .bio-container { flex-direction: column; text-align: center; } }
+    footer { text-align: center; padding: 80px 20px 60px; font-size: 14px; color: var(--muted); border-top: 1px solid #1A1A1A; }
+
+    @media(max-width:800px){ 
+      h1 { font-size: 38px; } 
+      .saas-container { height: 600px; }
+      .bio-container { flex-direction: column; text-align: center; } 
+    }
   </style>
 </head>
 <body>
@@ -56,36 +67,30 @@
 
 <section class="hero">
   <div class="wrap">
-    <h1>A IA que sabe dizer "não".</h1>
-    <p>O <strong>SUP3RA VECTRA™</strong> implementa uma camada de governança independente que elimina informações inventadas e garante que sua IA opere com <strong>Honestidade Radical</strong>.</p>
-    
     <div class="badge-doi">Registro Permanente (DOI): 10.5281/zenodo.18135699</div>
-
-    <div class="btn-group">
-      <a class="btn btn-primary" href="https://huggingface.co/spaces/Joao-sup3ra/SUP3RA-VECTRA-CORE" target="_blank">Testar Demo Live</a>
-      <a class="btn btn-secondary" href="https://github.com/Joao-supera/sup3ra-vectra" target="_blank">GitHub Repository</a>
-      <a class="btn btn-secondary" href="https://doi.org/10.5281/zenodo.18135699" target="_blank">Registro Científico</a>
+    <h1>A IA que não mente pra você.</h1>
+    <p>Experimente abaixo o <strong>SUP3RA VECTRA™ CORE</strong>. Uma camada de governança ativa que elimina alucinações em tempo real.</p>
+    
+    <div class="saas-container">
+      <iframe src="https://joao-sup3ra-sup3ra-vectra-core.hf.space" frameborder="0" allow="accelerometer; ambient-light-sensor; input-device-capabilities; gyroscope; payment; microphone; camera; midi; encrypted-media; usb; vr; xr-spatial-tracking" allowfullscreen></iframe>
     </div>
+
+    <p style="font-size: 14px; color: var(--muted);">Interface protegida pelo Protocolo Ω de Honestidade Radical.</p>
   </div>
 </section>
 
 <section class="bio-section">
   <div class="wrap">
     <div class="bio-container">
-      <img src="joao_henrique.png" alt="João Henrique de Souza Batista" class="bio-img">
+      <img src="joao_henrique.png" alt="João Henrique" class="bio-img">
       <div class="bio-content">
-        <h2 style="text-align: left; margin-bottom: 25px;">Minha Jornada: Do Silêncio da Guarita ao Futuro da IA</h2>
-        <p style="color: var(--muted); font-size: 18px; line-height: 1.8; margin-bottom: 20px;">
-          Minha trajetória não começou em laboratórios, mas nas madrugadas frias de uma guarita no interior do Ceará. Como ex-porteiro, enfrentando o TDAH e a dislexia, encontrei na IA um propósito de vida.
+        <h2 style="text-align: left; margin-bottom: 25px;">Do Ceará para o Futuro da IA</h2>
+        <p style="color: var(--muted); font-size: 18px; margin-bottom: 20px;">
+          João Henrique de Souza Batista transformou a visão sistêmica do TDAH em uma das arquiteturas éticas mais rigorosas do mercado global.
         </p>
-        <p style="color: var(--muted); font-size: 16px; line-height: 1.8;">
-          Dedicando 8 horas diárias de estudo, fundei a <strong>SUP3RA DIGITAL</strong> — um tributo à superação da minha mãe, da minha esposa e a minha própria. O VECTRA™ é o resultado desse compromisso: tecnologia com alma, verdade e segurança absoluta.
+        <p style="color: var(--muted); font-size: 16px;">
+          O VECTRA™ não é apenas código; é a prova de que a tecnologia deve servir ao humano, e nunca o contrário.
         </p>
-        <div class="quote-box">
-          <p style="font-style: italic; color: var(--accent); font-size: 17px; margin: 0;">
-            "A IA precisa de lógica para funcionar, mas de alma para servir."
-          </p>
-        </div>
       </div>
     </div>
   </div>
@@ -93,23 +98,19 @@
 
 <section style="background: #080808;">
   <div class="wrap">
-    <h2>Governança aplicada ao seu setor</h2>
+    <h2 style="text-align:center; font-size: 32px; margin-bottom: 40px;">Setores que utilizam SUP3RA</h2>
     <div class="scenario-grid">
       <div class="scenario-box">
-        <span class="scenario-role">Setor Jurídico & Compliance</span>
-        <p style="color: var(--muted); font-style: italic;">"Eliminamos o risco de citações falsas. O framework garante que a IA utilize apenas bases de dados verificadas, bloqueando qualquer tentativa de invenção de jurisprudência."</p>
+        <span class="scenario-role">Jurídico</span>
+        <p>Bloqueio total de jurisprudência inventada.</p>
       </div>
       <div class="scenario-box">
-        <span class="scenario-role">Saúde & Life Sciences</span>
-        <p style="color: var(--muted); font-style: italic;">"Segurança absoluta. O motor de interrupção impede que a IA simule diagnósticos médicos, mantendo-a estritamente como suporte à decisão profissional."</p>
+        <span class="scenario-role">Saúde</span>
+        <p>Suporte à decisão sem simulação de diagnóstico.</p>
       </div>
       <div class="scenario-box">
-        <span class="scenario-role">Finanças & Fintechs</span>
-        <p style="color: var(--muted); font-style: italic;">"Auditoria é fundamental. Cada recomendação gerada pela IA é acompanhada de um rastro criptográfico imutável para conformidade regulatória."</p>
-      </div>
-      <div class="scenario-box">
-        <span class="scenario-role">Atendimento ao Cliente (SAC)</span>
-        <p style="color: var(--muted); font-style: italic;">"Protegemos a reputação. A Honestidade Radical evita que a IA invente promessas comerciais ou políticas de reembolso inexistentes."</p>
+        <span class="scenario-role">Finanças</span>
+        <p>Rastreabilidade ética em cada recomendação.</p>
       </div>
     </div>
   </div>
@@ -117,21 +118,10 @@
 
 <footer>
   <div class="wrap">
-    <span class="sup3ra-brand">SUP3RA VECTRA™ v2.6.0</span>
-    <p style="margin: 15px 0; color: var(--muted); font-size: 14px; line-height: 2;">
-      Aracati, CE — Brasil | agsup3radigital@gmail.com<br>
-      <a href="https://www.linkedin.com/in/joaohenriquedigital/" target="_blank">LinkedIn</a> | 
-      <a href="https://x.com/Sup3raD70905" target="_blank">X (Twitter)</a> | 
-      <a href="https://github.com/Joao-supera/sup3ra-vectra" target="_blank">GitHub</a>
-    </p>
-    
-    <a href="http://wa.me/5588999137231" target="_blank" class="btn btn-whatsapp">
-      Falar no WhatsApp
-    </a>
-
-    <div style="opacity: 0.4; font-size: 11px; margin-top: 40px;">
-      © 2026 SUP3RA DIGITAL. Todos os direitos reservados.
-    </div>
+    <span style="font-weight:800;">SUP3RA VECTRA™ v2.6.0</span><br>
+    agsup3radigital@gmail.com<br>
+    <a href="http://wa.me/5588999137231" target="_blank" class="btn-whatsapp">Falar com o Arquiteto</a>
+    <p style="margin-top: 40px; opacity: 0.5;">© 2026 SUP3RA DIGITAL. Aracati, CE — Brasil.</p>
   </div>
 </footer>
 
